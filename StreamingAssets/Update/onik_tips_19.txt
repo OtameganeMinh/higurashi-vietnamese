@@ -1,0 +1,189 @@
+void main()
+{
+
+
+//■二重人格？？？
+
+//*Sub_Tips_019
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+	DisableWindow();
+	DrawScene("background/ke5", 400 );
+	PlayBGM( 1, "msys09", 128, 0 );
+
+//「よく映画などに登場しますが、簡単にいうとどのようなものでしょうか。＠
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44001", 256, TRUE);
+	OutputLine(NULL, "「よく映画などに登場しますが、簡単にいうとどのようなものでしょうか。」",
+		   NULL, "\"Tuy đã thấy nhiều trên phim ảnh rồi, nhưng phiền giáo sư hãy giải thích chi tiết về hiện tượng đa nhân cách cho quý vị khán giả nghe được không ạ?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「複数の人格を持つことによる逃避と考えられています。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Giáo sư</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44001", 256, TRUE);
+	OutputLine(NULL, "「複数の人格を持つことによる逃避と考えられています。」",
+		   NULL, "\"Những người mắc chứng đa nhân cách thường bị coi là cố trốn tránh thực tại.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「多重人格は逃避のひとつなのですか？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44002", 256, TRUE);
+	OutputLine(NULL, "「多重人格は逃避のひとつなのですか？」",
+		   NULL, "\"Vậy rối loạn đa nhân cách cũng là một phương pháp thoát ly thực tế phải không thưa giáo sư?\"", Line_Normal);
+	ClearMessage();
+
+//「左様です＠そのメカニズムは完全には解明されていませんが、精神を守るために脳が行なう防御行動のひとつではないかと考えられています。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Giáo sư</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44002", 256, TRUE);
+	OutputLine(NULL, "「左様です。",
+		   NULL, "\"<size=-2>Chính xác đấy.", Line_Continue);
+	Wait (1000);
+	OutputLine(NULL, "そのメカニズムは完全には解明されていませんが、精神を守るために脳が行なう防御行動のひとつではないかと考えられています。」",
+		   NULL, " Hiện giờ vẫn chưa có ai hoàn toàn hiểu được cơ chế hoạt động của chứng rối loạn đa nhân cách, nhưng nhiều người cho rằng nó là một động thái của não bộ nhằm bảo vệ cho tinh thần của bệnh nhân được ổn định.</size>\"", Line_Normal);
+	ClearMessage();
+
+//「例えば、貧乏な人がお金持ちになった自分を想像するという現実逃避ってありますよね＠　これも多重人格なわけですか？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44003", 256, TRUE);
+	OutputLine(NULL, "「例えば、貧乏な人がお金持ちになった自分を想像するという現実逃避ってありますよね？",
+		   NULL, "\"Vậy giả dụ như có một số người rất nghèo nhưng lại tự tưởng tượng rằng mình giàu để trốn tránh thực tại chẳng hạn.", Line_Continue);
+	Wait (3800);
+	OutputLine(NULL, "　これも多重人格なわけですか？」",
+		   NULL, " Liệu chúng ta có thể coi là những người đó bị mắc chứng rối loạn đa nhân cách không?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「極論はできませんが、広義的にはそう解釈できます＠つまり誰にでもありえる現象なのです。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Giáo sư</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44003", 256, TRUE);
+	OutputLine(NULL, "「極論はできませんが、広義的にはそう解釈できます。",
+		   NULL, "\"Riêng tôi thì không dám khẳng định chắc chắn, nhưng nếu nói theo kiểu chung chung thì mọi người suy luận như thế cũng được.", Line_Continue);
+	Wait (3000);
+	OutputLine(NULL, "つまり誰にでもありえる現象なのです。」",
+		   NULL, " Hiện tượng này có thể xảy ra với tất cả chúng ta mà.\"", Line_Normal);
+	ClearMessage();
+
+//「その現実逃避の見境がなくなると二重人格になるのですか？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44004", 256, TRUE);
+	OutputLine(NULL, "「その現実逃避の見境がなくなると二重人格になるのですか？」",
+		   NULL, "\"Vậy thì đa nhân cách là hệ quả xảy ra khi những người đó không thể phân biệt được đâu là sự thật và đâu là ảo giác mà mình tự dựng lên để trốn tránh thực tại, đúng không thưa giáo sư?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「...ちょっと難しいですね＠...そう提唱する説もありますし、否定する説もあります＠諸説紛々です。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Giáo sư</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44004", 256, TRUE);
+	OutputLine(NULL, "「…ちょっと難しいですね。",
+		   NULL, "\"...Chuyện này có hơi khó nói đấy.", Line_Continue);
+	Wait (2200);
+	OutputLine(NULL, "…そう提唱する説もありますし、否定する説もあります。",
+		   NULL, " Một số người thì ủng hộ giả thiết đó, một số khác lại phản đối.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44005", 256, TRUE);
+	OutputLine(NULL, "諸説紛々です。」",
+		   NULL, " Chưa ai thống nhất được gì cả.\"", Line_Normal);
+	ClearMessage();
+
+//「では精神医学の世界ではまだ、多重人格というのは未知の解明されていない現象なんですか？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44005", 256, TRUE);
+	OutputLine(NULL, "「では精神医学の世界ではまだ、多重人格というのは未知の解明されていない現象なんですか？」",
+		   NULL, "\"Vậy nghĩa là ngành tâm thần học... vẫn chưa thể nắm rõ được hoàn toàn bản chất của hiện tượng rối loạn tâm lý đa nhân cách sao?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「残念ながらそうなります＠今後の研究が期待されます。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Giáo sư</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44006", 256, TRUE);
+	OutputLine(NULL, "「残念ながらそうなります。",
+		   NULL, "\"Hiện giờ thì đúng là thế đấy, thật đáng tiếc.", Line_Continue);
+	Wait (1600);
+	OutputLine(NULL, "今後の研究が期待されます。」",
+		   NULL, " Chúng ta chỉ còn biết kỳ vọng vào các công trình nghiên cứu về sau thôi.\"", Line_Normal);
+	ClearMessage();
+
+//「でもでも～、二重人格なんて何だかカッコイイですよね～＠　どういう人が二重人格になれるんですかぁ？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44006", 256, TRUE);
+	OutputLine(NULL, "「でもでも〜、二重人格なんて何だかカッコイイですよね〜！",
+		   NULL, "\"Nhưng mà, nhưng mà~ Một người mà lại có nhiều tính cách được, nghe hay thật đấy nhỉ giáo sư~!", Line_Continue);
+	Wait (3000);
+	OutputLine(NULL, "　どういう人が二重人格になれるんですかぁ？」",
+		   NULL, " Những đối tượng nào thường xuyên mắc phải chứng rối loạn tâm lý này vậy?\"", Line_Normal);
+	ClearMessage();
+
+//「なれるといいますか...、なりやすいといいますか...＠最近の研究では、遺伝と心因が複雑に絡み合い...＠中でも幼少期の虐待が大きく作用するのではないかと言われています。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Giáo sư</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44007", 256, TRUE);
+	OutputLine(NULL, "「なれるといいますか…、なりやすいといいますか…。",
+		   NULL, "\"Theo các nghiên cứu mới đây thì những yếu tố thường xuyên... hay nói đúng hơn là những yếu tố dễ gây ra khả năng mắc phải chứng rối loạn này", Line_Continue);
+	Wait (1800);
+	OutputLine(NULL, "最近の研究では、遺伝と心因が複雑に絡み合い…。",
+		   NULL, " là đặc trưng di truyền hoặc những nguyên nhân tâm lý phức tạp khác...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Giáo sư</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44008", 256, TRUE);
+	OutputLine(NULL, "中でも幼少期の虐待が大きく作用するのではないかと言われています。」",
+		   NULL, "\"Bị ngược đãi trước tuổi vị thành niên cũng có thể là một yếu tố tăng cơ hội mắc phải rối loạn tâm lý.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「そう言えば、このＡ君も幼児虐待を受けてるんですよね～。カワイソ～...。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44007", 256, TRUE);
+	OutputLine(NULL, "「そう言えば、このＡ君も幼児虐待を受けてるんですよね〜。カワイソ〜…。」",
+		   NULL, "\"Nhân đây, khách mời của chương trình, bạn trẻ A cũng đã từng bị ngược đãi khi còn nhỏ tuổi đúng không nhỉ~ Tội nghiệp~...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//「７つの人格を持つ青年Ａ＠ではＶＴＲの続きをどうぞ＠/
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Phóng viên</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44008", 256, TRUE);
+	OutputLine(NULL, "「７つの人格を持つ青年Ａ。",
+		   NULL, "\"Bạn trẻ A có tới tận bảy tính cách khác nhau.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44009", 256, TRUE);
+	OutputLine(NULL, "ではＶＴＲの続きをどうぞ。",
+		   NULL, " Mời quý vị theo dõi thước phim tài liệu ngắn...", Line_WaitForInput);
+
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	PlaySE( 4, "wa_011", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 4, "wa_010", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 4, "wa_029", 128, 64 );
+
+//...ですがその前にコマーシャル！！￥
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44010", 256, TRUE);
+	OutputLine(NULL, "…ですがその前にコマーシャル！！」",
+		   NULL, " sau vài phút giải lao dành cho quảng cáo!!\"", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene("black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+}

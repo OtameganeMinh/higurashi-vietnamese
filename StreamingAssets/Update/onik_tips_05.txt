@@ -1,0 +1,179 @@
+void main()
+{
+
+
+//■雛見沢ダム計画
+
+//*Sub_Tips_005
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene("black", 1000 );
+	PlayBGM( 2, "lsys12", 128, 0 );
+
+//　昭和五十年十月＠
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　昭和五十年十月。",
+		   NULL, "Tháng Mười năm 1975.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　総理府告示第ＸＸＸ号を以て、雛見沢発電所電源開発基本計画が発表された＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　総理府告示第ＸＸＸ号を以て、雛見沢発電所電源開発基本計画が発表された。",
+		   NULL, "Theo Công điện số XXX của Thủ tướng Chính phủ, dự án xây dựng nhà máy thủy điện Hinamizawa bắt đầu được triển khai thi công.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+
+//　計画された「雛見沢ダム」の規模は甚大で、雛見沢村の受ける影響は余りに重大だった￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　計画された「雛見沢ダム」の規模は甚大で、雛見沢村の受ける影響は余りに重大だった。",
+		   NULL, "Phạm vi ảnh hưởng của công trình đập chắn nước thuộc dự án là một mối đe dọa nghiêm trọng đến đời sống và quá trình sản xuất của nhân dân các vùng lân cận.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene("background/kawa4", 1000 );
+
+//　雛見沢ダムにより水没する地域は雛見沢、高津戸、清津、松本、谷河内の五ヶ部落に及び＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　雛見沢ダムにより水没する地域は雛見沢、高津戸、清津、松本、谷河内の五ヶ部落に及び、",
+		   NULL, "Hồ chứa nước của nhà máy được dự tính sẽ nhấn chìm năm khu vực dân cư bao gồm Hinamizawa, Takatsudo, Kiyotsu, Matsumoto và Yagochi,", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　水没世帯は二九一戸＠人口一二五一人＠小学校一＠中学校一＠郵便局一＠農協支所一＠営林署貯木場一＠神社五＠寺院二＠魚族増殖場一＠等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　水没世帯は二九一戸、",
+		   NULL, "với dân số tổng cộng là 1251 người.", Line_WaitForInput);
+	OutputLine(NULL, "人口一二五一人、",
+		   NULL, " Ước tính thiệt hại bao gồm: 291 ngôi nhà,", Line_WaitForInput);
+	OutputLine(NULL, "小学校一、",
+		   NULL, " 1 trường tiểu học,", Line_WaitForInput);
+	OutputLine(NULL, "中学校一、",
+		   NULL, " 1 trường trung học,", Line_WaitForInput);
+	OutputLine(NULL, "郵便局一、",
+		   NULL, " 1 bưu điện,", Line_WaitForInput);
+	OutputLine(NULL, "農協支所一、",
+		   NULL, " 1 hợp tác xã nông nghiệp,", Line_WaitForInput);
+	OutputLine(NULL, "営林署貯木場一、",
+		   NULL, " 1 hạt kiểm lâm,", Line_WaitForInput);
+	OutputLine(NULL, "神社五、",
+		   NULL, " 5 đình làng,", Line_WaitForInput);
+	OutputLine(NULL, "寺院二、",
+		   NULL, " 2 ngôi chùa, ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "魚族増殖場一、",
+		   NULL, "và 1 ngư trường.", Line_WaitForInput);
+	OutputLine(NULL, "等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである。",
+		   NULL, " Chính phủ muốn phá hủy tất cả những công trình dân sinh, văn hóa, cơ sở sản xuất và nơi hoạt động tín ngưỡng - tôn giáo ấy chỉ để xây dựng một hồ nước nhân tạo.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene("background/damu2", 1000 );
+
+//　この天恵豊かで住みよい郷土を、血と汗をもって築いてくれた父祖幾百年の艱難辛苦を思えば余りに痛ましいことであり＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この天恵豊かで住みよい郷土を、血と汗をもって築いてくれた父祖幾百年の艱難辛苦を思えば余りに痛ましいことであり、",
+		   NULL, "Đó rõ ràng là hành động xúc phạm, chà đạp lên nơi quê cha đất tổ màu mỡ, phì nhiêu của bao nhiêu con người.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　水没地域はもとより全部落は郷土死守の決意を固め次々に決起、団結し鬼ケ淵死守同盟を結成＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　水没地域はもとより全部落は郷土死守の決意を固め次々に決起、団結し鬼ケ淵死守同盟を結成。",
+		   NULL, "Cũng vì lẽ đó mà toàn bộ người dân trong năm khu vực ấy đã đồng tâm hiệp lực dựng nên \"Liên Minh Tự Vệ Onigafuchi.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　ダム建設の中止、又は支流への計画変更を強力に要請し続けたのである￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ダム建設の中止、又は支流への計画変更を強力に要請し続けたのである。",
+		   NULL, "Dưới áp lực của những cuộc biểu tình phản đối dự án do Liên Minh tổ chức, công trình đập chắn nước đã bị đình chỉ thi công.", Line_Normal);
+	ClearMessage();
+
+//　平和的かつ民主的な話し合いを求めるも、政府とその傀儡である電源会社総裁ＸＸＸＸＸはこれを拒否＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　平和的かつ民主的な話し合いを求めるも、政府とその傀儡である電源会社総裁ＸＸＸＸＸはこれを拒否。",
+		   NULL, "Đường lối đấu tranh của Liên Minh luôn lấy hòa bình làm gốc, nhưng chính phủ cùng nhà thầu bù nhìn XXXXX lại công khai bác bỏ những bản khiếu nại, những đơn cáo trạng được gửi tới Bộ Xây dựng.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+//　筆舌に尽くし難い極悪非道を以て、村民の民主的運動と雛見沢の郷土を踏みにじったのである＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　筆舌に尽くし難い極悪非道を以て、村民の民主的運動と雛見沢の郷土を踏みにじったのである。",
+		   NULL, "Không chỉ thế, họ còn dùng nhiều âm mưu, thủ đoạn tàn độc nhằm xâm phạm đến quyền tự do ngôn luận của những người tham gia chống đối.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　だが村民はこれに怯むことなく益々団結、郷土死守の決意をさらに強固にしていくのである￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが村民はこれに怯むことなく益々団結、郷土死守の決意をさらに強固にしていくのである。",
+		   NULL, "Nhưng Liên Minh Tự Vệ không vì thế mà chùn bước. Càng bị đàn áp, tinh thần đấu tranh cảm tử vì quê hương trong tâm hồn họ càng bùng cháy mạnh mẽ hơn.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene("background/mo_b1", 1000 );
+
+//　今日、恐るべき雛見沢ダム建設計画は、その再開が無期限に凍結されている＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　今日、恐るべき雛見沢ダム建設計画は、その再開が無期限に凍結されている。",
+		   NULL, "Giờ đây, dự án xây dựng nhà máy thủy điện Hinamizawa đã bị hoãn thi công vô thời hạn.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　村民はこの凍結が自らの団結の祟高な力によってなされていることを理解しており＠そしてこの恐るべき計画が依然撤回されていないことも理解しているのである￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　村民はこの凍結が自らの団結の祟高な力によってなされていることを理解しており、",
+		   NULL, "<size=-2>Tất cả những người đã từng tham gia chiến đấu đều hiểu rõ hai điều rằng: có được kết quả này là nhờ sức mạnh phi thường của lòng đoàn kết,</size>", Line_WaitForInput);
+	OutputLine(NULL, "そしてこの恐るべき計画が依然撤回されていないことも理解しているのである。",
+		   NULL, " <size=-2>và đây mới chỉ là chiến thắng tạm thời, vì dự án vẫn còn chưa bị hủy bỏ hoàn toàn.</size>", Line_Normal);
+	ClearMessage();
+
+//　すでに鬼ケ淵死守同盟はその役割を終え解散しているが、そこで育まれた団結の炎は消えていない＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　すでに鬼ケ淵死守同盟はその役割を終え解散しているが、そこで育まれた団結の炎は消えていない。",
+		   NULL, "Tuy giờ đây Liên Minh Tự Vệ Onigafuchi đã giải thể, nhưng ánh hào quang của tinh thần đồng tâm hiệp lực mà họ đã tạo nên sẽ còn mãi chỉ đường cho người dân Hinamizawa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである。",
+		   NULL, "Tinh thần ấy luôn sẵn sàng kết lại thành một làn sóng vô cùng mạnh mẽ và to lớn để sẵn sàng nhấn chìm lại bất kì kẻ nào muốn nhấn chìm mảnh đất nơi họ chôn rau cắt rốn.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
+
+
+//　　　　　鬼ケ淵死守同盟会長!w1000　公由喜一郎￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　　　　　鬼ケ淵死守同盟会長",
+		   NULL, "Kí tên: Cựu Chủ tịch Hội đồng Liên Minh Tự Vệ Onigafuchi,", Line_ContinueAfterTyping);
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "　公由喜一郎書",
+		   NULL, " Kimiyoshi Kiichirou.", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene("black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//gosub *tip_e
+//return
+
+
+
+
+}

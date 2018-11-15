@@ -1,0 +1,366 @@
+void main()
+{
+
+
+//■週刊誌の特集記事
+
+//*Sub_Tips_006
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene("black", 1000 );
+	DrawScene("background/simen3", 1000 );
+//locate 3,5
+
+	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 5 ); }
+	SetStyleOfMessageSwinging( 1 );
+//　雛見沢ダムで悪夢の惨劇＠
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　雛見沢ダムで悪夢の惨劇！",
+		   NULL, "Ác mộng tại công trình đập thủy điện Hinamizawa!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//locate 4,6
+
+	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 6 ); }
+
+//　リンチ・バラバラ殺人￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　リンチ・バラバラ殺人！",
+		   NULL, "Từ phòng vệ chính đáng hóa giết người chặt xác!", Line_Normal);
+	ClearMessage();
+	SetStyleOfMessageSwinging( 0 );
+	PlayBGM( 1, "msys07", 128, 0 );
+
+//　Ｘ月Ｘ日、ＸＸ県鹿骨市の雛見沢ダム建設作業現場で起こった血も凍るバラバラ殺人＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　Ｘ月Ｘ日、ＸＸ県鹿骨市の雛見沢ダム建設作業現場で起こった血も凍るバラバラ殺人。",
+		   NULL, "Vào ngày X tháng X, một vụ thảm án đã xảy ra tại công trình xây dựng đập thủy điện ở làng Hinamizawa thuộc quận XX, thành phố Shishibone.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　列島を震撼させたショッキングな事件でありながら、警察はその細部を語ろうとしていない...＠一体、雛見沢ダムで何が...￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　列島を震撼させたショッキングな事件でありながら、警察はその細部を語ろうとしていない…。",
+		   NULL, "Cảnh sát có vẻ muốn giữ bí mật về vụ án này, nhưng cuối cùng vẫn để lọt nhiều thông tin gây chấn động dư luận...", Line_WaitForInput);
+	OutputLine(NULL, "一体、雛見沢ダムで何が…？",
+		   NULL, " Rốt cuộc thì chuyện gì đã xảy ra...?", Line_Normal);
+	ClearMessage();
+
+//「始めは殺すつもりはなかったのでしょう＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>係者Ａ</color>", NULL, "<color=#f5e6d3>Điều tra viên A</color>", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「始めは殺すつもりはなかったのでしょう。",
+		   NULL, "\"Các đối tượng vốn không có ý định giết người,", Line_WaitForInput);
+	OutputLine(NULL, "　ですが被害者がシャベルを振り回して抵抗を始めると、加害者たちも一斉に得物を手にし、一気に殺し合いにエスカレートしたのです。」",
+		   NULL, " nhưng khi nạn nhân dùng xẻng tấn công, họ bắt buộc phải đánh trả để tự vệ, và vô tình làm chết ông ta.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　ですが被害者がシャベルを振り回して抵抗を始めると、加害者たちも一斉に得物を手にし、一気に殺し合いにエスカレートしたのです。＠と前述の捜査関係者Ａ氏は語る￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "と前述の捜査関係者Ａ氏は語る。",
+		   NULL, "Điều tra viên A trả lời như vậy khi được chúng tôi phỏng vấn.", Line_Normal);
+	ClearMessage();
+
+//　血の惨劇が終われば、そこには誰の眼にも生きているとは思えない無残な屍...￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　血の惨劇が終われば、そこには誰の眼にも生きているとは思えない無残な屍…。",
+		   NULL, "Mãi tận đến khi cuộc ẩu đả đẫm máu kết thúc, các hung thủ mới nhận ra rằng nạn nhân đã tắt thở...", Line_Normal);
+	ClearMessage();
+
+//　日頃から粗暴な振る舞いで容疑者たちをいじめていたＸＸさん＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　日頃から粗暴な振る舞いで容疑者たちをいじめていたＸＸさん。",
+		   NULL, "Nạn nhân là ông XXXXXXX, quản lí công trường. Ông ta thường bị cáo buộc là khó tính và thường xuyên bạo hành cấp dưới.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　始めはちょっとした仕返しのつもりだった...￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　始めはちょっとした仕返しのつもりだった…。",
+		   NULL, "Liệu đó có phải nguyên nhân dẫn đến cuộc ẩu đả trong đêm hôm ấy...?", Line_Normal);
+	ClearMessage();
+
+//「加害者たちは皆、自らの罪深さに恐れおののきました＠警察へ出頭しようと言い出す者もいたのです。」
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>村人</color>", NULL, "<color=#f5e6d3>Điều tra viên A</color>", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「加害者たちは皆、自らの罪深さに恐れおののきました。",
+		   NULL, "\"Khi nhận ra nạn nhân đã chết, các đối tượng tham gia ẩu đả đều vô cùng hoảng sợ.", Line_WaitForInput);
+	OutputLine(NULL, "警察へ出頭しようと言い出す者もいたのです。」",
+		   NULL, " Một số còn có ý định đến cơ quan công an đầu thú.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　だがリーダー格のＸＸだけは、死体を隠そうと提案した＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だがリーダー格のＸＸだけは、死体を隠そうと提案した。",
+		   NULL, "Nhưng một đối tượng tên XXXXXX lại đề xuất chôn giấu thi thể.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+//　始めは渋った彼らも、次第に捕まりたくないと思い始めるようになる＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　始めは渋った彼らも、次第に捕まりたくないと思い始めるようになる。",
+		   NULL, "Các đối tượng khác mới đầu cũng hơi miễn cưỡng, nhưng rồi ý nghĩ thoát tội sớm lóe lên trong lòng cả nhóm.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+//　人数は６人いて死体を隠す方法がいくらでもある建設現場...＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　人数は６人いて死体を隠す方法がいくらでもある建設現場…。",
+		   NULL, "Địa thế của khu vực xung quanh hiện trường lại vô cùng thuận lợi cho việc phi tang xác nạn nhân...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　彼らは揚々と死体を隠し、その場を離れるはずだった...￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼らは揚々と死体を隠し、その場を離れるはずだった…。",
+		   NULL, "Kế hoạch ban đầu vốn chỉ là chôn xác rồi bỏ trốn...", Line_Normal);
+	ClearMessage();
+
+//「しかしリーダー格のＸＸは、他の５人が良心の呵責に耐えられなくなり＠自首して事件が発覚することを恐れ、恐るべき方法でその口封じを図ったのです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「しかしリーダー格のＸＸは、他の５人が良心の呵責に耐えられなくなり、",
+		   NULL, "Nhưng chủ mưu XXXXXX e sợ rằng năm tên đồng bọn sẽ bị lương tâm cắn rứt mà đi tố cáo hắn,", Line_WaitForInput);
+	OutputLine(NULL, "自首して事件が発覚することを恐れ、恐るべき方法でその口封じを図ったのです。」",
+		   NULL, " nên đã nghĩ ra một phương thức tàn độc để \"chia đều tội lỗi\"...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　なんとＸＸは死体を人数分に切断し、それぞれの責任で隠すという悪魔の方法を思いついたのである￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　なんとＸＸは死体を人数分に切断し、それぞれの責任で隠すという悪魔の方法を思いついたのである。",
+		   NULL, "Hắn đề xuất chặt xác nạn nhân ra làm nhiều mảnh, rồi giao cho mỗi người một mảnh để phia tang riêng biệt.", Line_Normal);
+	ClearMessage();
+
+//「ＸＸは、単なる暴行致死でなくもっと恐ろしいバラバラ殺人に仕立て上げ、ひとりひとりを深く関与させることで結束を固めようとしたのです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>係者Ａ</color>", NULL, "<color=#f5e6d3>Điều tra viên A</color>", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「ＸＸは、単なる暴行致死でなくもっと恐ろしいバラバラ殺人に仕立て上げ、ひとりひとりを深く関与させることで結束を固めようとしたのです。」",
+		   NULL, "\"Chỉ vì muốn kéo theo người khác vào một âm mưu vô nghĩa, XXXXXX đã tự tăng nặng tội danh của mình từ vô ý vượt quá giới hạn phòng vệ chính đáng lên giết người, hủy hoại và phi tang thi thể.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　ひとりひとりを深く関与＠...これが意味するのは何なのか＠Ａ氏は重い口を開く￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ひとりひとりを深く関与。",
+		   NULL, "Mọi đối tượng đều đồng ý tham gia.", Line_WaitForInput);
+	OutputLine(NULL, "…これが意味するのは何なのか。",
+		   NULL, " Nhưng tại sao lại vậy chứ?", Line_WaitForInput);
+	OutputLine(NULL, "Ａ氏は重い口を開く。",
+		   NULL, " Đối tượng A khai nhận tại cơ quan điều tra như sau:", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 4, "wa_027", 128, 64 );
+
+//「ＸＸは、ひとりひとりに自らの手で遺体を切断するよう命じたのです＠彼らは始めは渋りましたが、結局誰も逆らえませんでした。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>Ａ氏</color>", NULL, "<color=#f5e6d3>Đối tượng A</color>", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「ＸＸは、ひとりひとりに自らの手で遺体を切断するよう命じたのです。",
+		   NULL, "\"XXXXXX ra lệnh cho tất cả mọi người rằng ai cũng phải tự tay chặt một mảnh.", Line_WaitForInput);
+	OutputLine(NULL, "彼らは始めは渋りましたが、結局誰も逆らえませんでした。」",
+		   NULL, " Ai nấy đều chần chừ, nhưng cũng chẳng ai dám từ chối.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　毒食らわば皿まで...ということなのか＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　毒食らわば皿まで…ということなのか。",
+		   NULL, "Chắc hẳn các đối tượng đều nghĩ rằng \"Đã đâm lao thì đành phải theo lao thôi.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　かくして、想像するのも躊躇われる恐るべき血の儀式が始まったのである￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　かくして、想像するのも躊躇われる恐るべき血の儀式が始まったのである。",
+		   NULL, "Và thế là bữa rượu máu đêm hôm ấy bắt đầu.", Line_Normal);
+	ClearMessage();
+
+//「被害者たちは泣きながら嘔吐しながら、死体を切断しました＠頑強に抵抗する者もいましたが、ＸＸに『今さらもうひとり死んでも同じことだぞ。』と凄まれ、結局は抗えなかったのです。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「被害者たちは泣きながら嘔吐しながら、死体を切断しました。",
+		   NULL, "Các đối tượng vừa phanh thây nạn nhân vừa khóc lóc và ói mửa vì tự thấy kinh tởm trước hành động của chính mình.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "頑強に抵抗する者もいましたが、ＸＸに『今さらもうひとり死んでも同じことだぞ。』と凄まれ、結局は抗えなかったのです。」",
+		   NULL, "Có một đối tượng tên XXX quyết phản đối đến cùng nhưng rồi cũng phải bỏ cuộc sau khi bị XXXXXX đe dọa rằng \"Thêm một cái xác nữa cũng chẳng vấn đề gì với tao đâu.\"", Line_Normal);
+	ClearMessage();
+
+//　だがＸＸの目論見はわずか一晩で崩れた＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だがＸＸの目論見はわずか一晩で崩れた。",
+		   NULL, "Kì công là vậy nhưng âm mưu của hắn vẫn sụp đổ rất nhanh chóng.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　死体の切断に最後まで抵抗したＸＸＸが、乱闘時の傷の治療に訪れた病院で、泣き崩れながら告白したのである...￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　死体の切断に最後まで抵抗したＸＸＸが、乱闘時の傷の治療に訪れた病院で、泣き崩れながら告白したのである…。",
+		   NULL, "Ngay ngày hôm sau, khi đang được điều trị vết thương tại bệnh viện thành phố Shishibone, XXX đã thú nhận hành vi của mình với đội ngũ y bác sĩ...", Line_Normal);
+	ClearMessage();
+
+//　犯人たちは芋づる式に逮捕されたが、リーダー格のＸＸの行方だけは掴めていない＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　犯人たちは芋づる式に逮捕されたが、リーダー格のＸＸの行方だけは掴めていない。",
+		   NULL, "Nhờ lời khai thành khẩn của đối tượng này, cảnh sát nhanh chóng bắt được thêm bốn nghi can nữa ngay trong ngày hôm ấy, nhưng cho đến tận bây giờ vẫn chưa ai có tung tích gì của kẻ cầm đầu, XXXXXX.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　また、ＸＸが隠した右腕部分も発見されていない＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　また、ＸＸが隠した右腕部分も発見されていない。",
+		   NULL, "Cánh tay phải của nạn nhân do hắn phi tang cũng chưa thể tìm thấy.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　警察の連日の捜査にも関わらず、悪魔のような男が未だ法の手を逃れているのである＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　警察の連日の捜査にも関わらず、悪魔のような男が未だ法の手を逃れているのである。",
+		   NULL, "Dù đã phát lệnh truy nã đặc biệt trên phạm vi toàn quốc mà công cuộc theo dấu kẻ cầm đầu thảm án này vẫn cứ đang dần dần bị dồn vào ngõ cụt.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　警察は何をしているのか...￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　警察は何をしているのか…。",
+		   NULL, "Liệu phía cảnh sát có đang thực sự \"huy động mọi lực lượng\" để tìm kiếm hắn không...?", Line_Normal);
+	ClearMessage();
+
+//「ＸＸが死体（右腕）を沼に捨てに行くと言っていたらしいのです＠実際、沼の近くにＸＸの乗用車が乗り捨ててあったのですが、その後の足取りはまったくわかりません。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>係者Ａ</color>", NULL, "<color=#f5e6d3>Điều tra viên A</color>", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「ＸＸが死体（右腕）を沼に捨てに行くと言っていたらしいのです。",
+		   NULL, "\"Theo lời khai của các đối tượng đã bị bắt giữ, XXXXXX từng nói sẽ ném cánh tay phải của nạn nhân xuống \"Đầm Lầy Quỷ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>係者Ａ</color>", NULL, "<color=#f5e6d3>Điều tra viên A</color>", NULL, Line_ContinueAfterTyping); }	
+	OutputLine(NULL, "実際、沼の近くにＸＸの乗用車が乗り捨ててあったのですが、その後の足取りはまったくわかりません。」",
+		   NULL, "Nhưng khi đội điều tra tới đó thì chỉ phát hiện xe của hắn đỗ cạnh đầm lầy chứ không tìm ra một manh mối nào khác cả.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　仲間の裏切りを最後まで疑っていたＸＸ＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　仲間の裏切りを最後まで疑っていたＸＸ。",
+		   NULL, "Từ kế hoạch chặt xác để \"chia đều tội lỗi\", ta có thể thấy rõ rằng XXXXXX không hề tin tưởng đồng bọn một chút nào.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　仲間が警察に自供することを見越して、沼以外の場所に逃れた可能性は拭いきれない￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　仲間が警察に自供することを見越して、沼以外の場所に逃れた可能性は拭いきれない。",
+		   NULL, "Nhiều người cho rằng hắn cũng đã tính trước trường hợp bị tố cáo nên mới cố tình nói ra địa điểm phi tang giả rồi bỏ xe lại đó để đánh lạc hướng cảnh sát.", Line_Normal);
+	ClearMessage();
+
+//「もちろんそれも疑っています＠...車はないはずなので、逃げられる範囲にも限度があると思うのですが...＠署内では、死体を捨てる時に誤って自分も沼に溺れてしまったのではないかと囁かれています...。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>係者Ａ</color>", NULL, "<color=#f5e6d3>Điều tra viên A</color>", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「もちろんそれも疑っています。",
+		   NULL, "<size=-2>\"Giả thiết đó nghe thì cũng có vẻ hợp lí.</size>", Line_WaitForInput);
+	OutputLine(NULL, "…車はないはずなので、逃げられる範囲にも限度があると思うのですが…。",
+		   NULL, " <size=-2>Nhưng nếu hắn thực sự bỏ xe để lẩn trốn thì các đội tìm kiếm trong thành phố hoặc các nhóm mai phục ở trạm xe, bến tàu, sân bay, cảng biển,... phải dễ dàng tìm ra tung tích của hắn chứ?</size>", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>係者Ａ</color>", NULL, "<color=#f5e6d3>Điều tra viên A</color>", NULL, Line_ContinueAfterTyping); }	
+	OutputLine(NULL, "署内では、死体を捨てる時に誤って自分も沼に溺れてしまったのではないかと囁かれています…。」",
+		   NULL, "Một số người khác lại tin rằng hắn đến đầm lầy phi tang tay phải nạn nhân rồi vô tình trượt chân ngã xuống.\"", Line_Normal);
+	ClearMessage();
+
+//　この沼、地元では底なし沼と恐れられ＠その名を鬼ヶ淵と言い、沼の底の底は地獄の鬼の国につながっているのだという＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この沼、地元では底なし沼と恐れられ、",
+		   NULL, "Theo lời dân bản địa thì nơi đó không phải là đầm lầy bình thường.", Line_WaitForInput);
+	OutputLine(NULL, "その名を鬼ヶ淵と言い、沼の底の底は地獄の鬼の国につながっているのだという。",
+		   NULL, " Họ tin rằng vũn bùn ấy không có đáy và bất cứ thứ gì rơi xuống đó đều sẽ chìm thẳng tới địa ngục đầy quỷ dữ, nên mới đặt cho nó cái tên \"Đầm Lầy Quỷ\".", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　まさに地獄の鬼とも言える残虐非道のＸＸ＠まさか沼から元の地獄へ帰ったのでは...￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まさに地獄の鬼とも言える残虐非道のＸＸ。",
+		   NULL, "Liệu tên XXXXXX ác độc đến vô nhân tính ấy có phải là một con quỷ?", Line_WaitForInput);
+	OutputLine(NULL, "まさか沼から元の地獄へ帰ったのでは…？",
+		   NULL, " Có phải sau khi gieo rắc nỗi kinh hoàng nơi trần thế, hắn lại quay trở về địa ngục qua cánh cổng đó không...?", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 4, "wa_029", 128, 64 );
+	PlayBGM( 1, "msys03", 128, 0 );
+
+//　超運と勝利を招く紫金龍＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　超運と勝利を招く紫金龍！",
+		   NULL, "Chuyên mục quảng cáo! Hãy mua ngay <color=#6972c1>Bùa Rồng Tím,</color> bảo vật linh thiêng chuyên giải vận giải hạn, đem về phúc lộc vô biên!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　金運将＠・女運飛＠・事業発＠・立身出＠・権力掌＠・厄除護＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　金運将来",
+		   NULL, "-Cầu sự nghiệp, được sự nghiệp!-", Line_WaitForInput);
+	OutputLine(NULL, "・女運飛躍",
+		   NULL, " -Cầu tình duyên, được tình duyên!-", Line_WaitForInput);
+	OutputLine(NULL, "・事業発展",
+		   NULL, " -Cầu danh lợi, được danh lợi!-", Line_WaitForInput);
+	OutputLine(NULL, "・立身出世",
+		   NULL, " -Cầu thăng tiến, được thăng tiến!-", Line_WaitForInput);
+	OutputLine(NULL, "・権力掌握",
+		   NULL, " -Cầu con cái, được con cái!-", Line_WaitForInput);
+	OutputLine(NULL, "・厄除護身",
+		   NULL, " -Cầu bình an, được bình an!-", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　パチンコや競馬などの賭け事はもとより、ビジネスから恋愛まで...＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　パチンコや競馬などの賭け事はもとより、ビジネスから恋愛まで…。",
+		   NULL, "Giành thắng lợi về cho bạn trên cả sòng bạc lẫn tình trường!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　効果がなければ全額お返しします＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　効果がなければ全額お返しします！",
+		   NULL, "Đảm bảo chất lượng 100%! Cam kết trả lại tiền nếu không hiệu quả!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　紫金龍ブレスレットＤＸ（一括＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　紫金龍ブレスレットＤＸ（一括）",
+		   NULL, "<color=#6972c1>Bùa Rồng Tím</color> linh thiêng, hiện đang <color=#fcdb77>GIẢM GIÁ ĐẶC BIỆT!</color>", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　２７，８００￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　２７，８００円",
+		   NULL, "Rước ngay phúc lộc về nhà chỉ với <color=#5ec69a>27,800¥</color> một lá!", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene("black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+
+}

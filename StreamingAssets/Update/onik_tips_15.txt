@@ -1,0 +1,344 @@
+void main()
+{
+
+//■本部長通達
+
+//*Sub_Tips_015
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene("black", 1000 );
+	DrawSceneWithMask("background/ke5", "down", 0, 0, 1300 );
+	PlayBGM( 1, "msys12", 128, 0 );
+
+//!s50
+
+//locate 13,0
+
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+	SetStyleOfMessageSwinging( 2 );
+
+//昭和５７年７月１日
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "昭和５７年７月１日",
+		   NULL, "Ngày 1 tháng Bảy năm 1982", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+//locate 13,1
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//総総管イ１－１２号
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "総総管イ１−１２号",
+		   NULL, "Kính gửi: -Các phân khu từ 1 đến 12", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+	SetStyleOfMessageSwinging( 0 );
+
+//ＸＸ県警察本部
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "ＸＸ県警察本部",
+		   NULL, "-Sở Cảnh sát quận XX", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//本部長　ＸＸＸ
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "本部長　ＸＸＸ",
+		   NULL, "-Đồng chí XXX (Tổng cục trưởng Tổng cục An ninh)", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+//locate 10,5
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+	SetStyleOfMessageSwinging( 2 );
+
+//各警察署長・施設管理者殿
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "各警察署長・施設管理者殿",
+		   NULL, "-Tất cả các đồng chí Chi cục trưởng và các chiến sĩ cảnh sát", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//locate 3,7
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+	SetStyleOfMessageSwinging( 1 );
+
+//雛見沢村における事件について（通達）
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "雛見沢村における事件について（通達）",
+		   NULL, "(THÔNG CÁO QUAN TRỌNG) CÔNG VĂN VỀ VẤN ĐỀ GIẢI QUYẾT CÁC VỤ ÁN THUỘC ĐỊA PHẬN LÀNG HINAMIZAWA", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+	SetStyleOfMessageSwinging( 0 );
+
+//　鹿骨市雛見沢村の近年の事件は、すでに一部マスコミでも報道されるように、/
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鹿骨市雛見沢村の近年の事件は、すでに一部マスコミでも報道されるように、",
+		   NULL, "Thời gian qua, các vụ án xảy ra trên địa phận làng Hinamizawa, thành phố Shishibone đã được một số phương tiện truyền thông đưa ra trước dư luận,", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//世間の好奇の目を引き地域住民の穏便な生活に重大な影響を及ぼしつつある、大変憂慮すべき事態となっている。
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "世間の好奇の目を引き地域住民の穏便な生活に重大な影響を及ぼしつつある、大変憂慮すべき事態となっている。",
+		   NULL, "khiến quần chúng toàn quốc rơi vào trạng thái bất an và làm tổn hại nghiêm trọng đến điều kiện nhân sinh của cư dân bản địa.", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　地域住民の生活と財産を保護するため、以下の遵守を通達する。
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　地域住民の生活と財産を保護するため、以下の遵守を通達する。",
+		   NULL, "Nhằm bảo vệ cuộc sống yên bình của nhân dân, Bộ Công An đề nghị toàn bộ các chi cục An ninh trực thuộc các phân khu từ 1 đến 12 thực hiện nghiêm một số chỉ thị sau đây:", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//（１） 秘匿捜査指定
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（１）秘匿捜査指定",
+		   NULL, "(1) Giữ bí mật về quá trình điều tra của các chuyên án sau:", Line_ContinueAfterTyping);
+
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５７年第Ｘ号
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　興宮署昭和５７年第Ｘ号",
+		   NULL, "-Chuyên án số X năm 1982 của Sở Okinomiya:", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村主婦殺人事件（６月ＸＸ日発生）
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　　雛見沢村主婦殺人事件（６月ＸＸ日発生）",
+		   NULL, "Vụ bà nội trợ bị sát hại tại làng Hinamizawa vào ngày XX tháng Sáu", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５７年第Ｘ号
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　興宮署昭和５７年第Ｘ号",
+		   NULL, "-Chuyên án số X năm 1982 của Sở Okinomiya:", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村生徒失踪事件（６月ＸＸ日発生）
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　　雛見沢村生徒失踪事件（６月ＸＸ日発生）",
+		   NULL, "Vụ nam sinh mất tích tại làng Hinamizawa vào ngày XX tháng Sáu", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//（２） 情報の非開示
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（２）情報の非開示",
+		   NULL, "(2) Điều tra công khai các chuyên án sau:", Line_ContinueAfterTyping);
+
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５４年第Ｘ号
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　興宮署昭和５４年第Ｘ号",
+		   NULL, "-Chuyên án số X năm 1979 của Sở Okinomiya:", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村現場監督殺人事件（６月ＸＸ日発生）
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　　雛見沢村現場監督殺人事件（６月ＸＸ日発生）",
+		   NULL, "Vụ người quản lí công trình thi công đập thủy điện bị sát hại tại làng Hinamizawa vào ngày XX tháng Sáu", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　白川署昭和５５年第Ｘ号
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　白川署昭和５５年第Ｘ号",
+		   NULL, "-Chuyên án số X năm 1980 của Sở Shirakawa:", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　白川自然公園転落事故（６月ＸＸ日発生）
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　　白川自然公園転落事故（６月ＸＸ日発生）",
+		   NULL, "Vụ tai nạn ngã vách đá tại Vườn Quốc gia Shirakawa vào ngày XX tháng Sáu", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５６年第Ｘ号
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　興宮署昭和５６年第Ｘ号",
+		   NULL, "-Chuyên án số X năm 1981 của Sở Okinomiya:", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村神主妻失踪事件（６月ＸＸ日発生）
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　　雛見沢村神主妻失踪事件（６月ＸＸ日発生）",
+		   NULL, "Vụ người vợ của vị pháp sư trụ trì đền thờ mất tích tại làng Hinamizawa vào ngày XX tháng Sáu", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//（３） 関係各機関への報道自粛要請
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（３）関係各機関への報道自粛要請",
+		   NULL, "(3) Yêu cầu các bên liên quan thực hiện chặt chẽ việc bảo mật thông tin:", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　別添資料１・２・３参照
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　別添資料１・２・３参照",
+		   NULL, "-Đề nghị các cá nhân tham gia điều tra nghiêm túc tuân theo các chỉ thị (1), (2) và (3) đã nói trên.", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+//locate 12,8
+
+	SetStyleOfMessageSwinging( 2 );
+
+//担当　ＸＸ県警察本部
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "担当　ＸＸ県警察本部",
+		   NULL, "Nơi nhận: các Chi cục An ninh trực thuộc 12 phân khu", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+//locate 16,9
+
+	SetStyleOfMessageSwinging( 2 );
+
+//内線ＸＸＸＸ
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "内線ＸＸＸＸ",
+		   NULL, "Đường dây nội bộ: XXXX", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+//locate 14,10
+
+//警務部ＸＸ・ＸＸ/
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "警務部ＸＸ・ＸＸ",
+		   NULL, "Ban XX XX, Bộ Công An", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene("black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+}

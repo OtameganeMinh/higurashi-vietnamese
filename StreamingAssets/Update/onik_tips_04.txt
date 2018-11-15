@@ -1,0 +1,127 @@
+void main()
+{
+
+
+//■ダム現場のバラバラ殺人
+
+//*Sub_Tips_004
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene("black", 1000 );
+	DrawScene("background/simen3", 1000 );
+	PlayBGM( 1, "msys15", 128, 0 );
+//　昭和５４年６月ＸＸ日夕刊よ＠
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　昭和５４年６月ＸＸ日夕刊より",
+		   NULL, "Báo Pháp luật số ngày XX tháng Sáu năm 1979.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　鹿骨市興宮署はＸＸ日深夜＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鹿骨市興宮署はＸＸ日深夜、",
+		   NULL, "Đêm khuya ngày XX tháng Sáu năm 1979, Sở Cảnh sát tỉnh Okinomiya trực thuộc thành phố Shishibone đã bắt giữ khẩn cấp năm công nhân xây dựng.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　建設作業員ＸＸＸＸ、ＸＸＸ、ＸＸＸＸ、ＸＸＸＸＸ、ＸＸＸＸを殺人、死体遺棄の容疑で逮捕し、逃走中の主犯格ＸＸＸＸを全国に指名手配した＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　建設作業員ＸＸＸＸ、ＸＸＸ、ＸＸＸＸ、ＸＸＸＸＸ、ＸＸＸＸを殺人、死体遺棄の容疑で逮捕し。",
+		   NULL, "Các đối tượng X, X, XXX, XXXX và XXXXX bị tình nghi đã giết người, hủy hoại và cố ý phi tang thi thể nạn nhân.", Line_Normal);
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　逃走中の主犯格ＸＸＸＸを全国に指名手配した。",
+		   NULL, "Đối tượng chủ mưu XXXXXX (hiện còn đang lẩn trốn) đã bị đưa vào danh sách truy nã đặc biệt trên phạm vi toàn quốc.", Line_Normal);
+	ClearMessage();	
+//文字数オーバーにつき画面外にテキストが出たため、@をページ送り処理に変更。
+
+//　調べによると、６容疑者はＸＸ日午後９時頃、雛見沢ダム建設現場内の作業事務所にて＠現場監督のＸＸＸＸさんを集団で暴行して殺害し、遺体を切断して遺棄した疑い￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　調べによると、６容疑者はＸＸ日午後９時頃、雛見沢ダム建設現場内の作業事務所にて、",
+		   NULL, "Theo điều tra, sáu nghi phạm có mặt tại văn phòng làm việc bên trong công trình thi công đập chắn nước tại làng Hinamizawa vào lúc 21 giờ đêm ngày XX tháng Sáu ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "現場監督のＸＸＸＸさんを集団で暴行して殺害し、遺体を切断して遺棄した疑い。",
+		   NULL, "bị tình nghi rằng đã cùng nhau hành hung rồi sát hại người quản lý công trình XXXXXXX, rồi chặt xác nạn nhân ra thành nhiều mảnh hòng phi tang.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 4, "wa_021", 128, 64 );
+	Wait( 200 );
+
+//　ＸＸ日午前８時頃＠鹿骨市内の病院から警察へ、「ＸＸＸＸさんを殺害したことをほのめかす男性がいる」との通報があり＠警察官が駆けつけ事情を聞いたところ、事件を自供＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ＸＸ日午前８時頃、",
+		   NULL, "Vào 8 giờ sáng ngày XX,", Line_WaitForInput);
+	OutputLine(NULL, "鹿骨市内の病院から警察へ、「ＸＸＸＸさんを殺害したことをほのめかす男性がいる」との通報があり、",
+		   NULL, " thông tin về một bệnh nhân tự nhận rằng đã sát hại ông XXXXXXX được bệnh viện thành phố Shishibone chuyển tới phía cảnh sát. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "警察官が駆けつけ事情を聞いたところ、事件を自供。",
+		   NULL, "Tại cơ quan điều tra, nghi phạm đã mau chóng thú nhận hành vi tàn độc của mình.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　供述通りの場所から遺体の一部が発見されたため、同日午後、殺人、死体遺棄の容疑で逮捕した￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　供述通りの場所から遺体の一部が発見されたため、同日午後、殺人、死体遺棄の容疑で逮捕した。",
+		   NULL, "Theo lời khai của nghi phạm này, một phần thi thể nạn nhân đã được tìm thấy trong buổi chiều cùng ngày. Đối tượng đã lập tức bị tạm giam vì hành vi giết người và hủy hoại thi thể.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 4, "wa_021", 128, 64 );
+	Wait( 200 );
+
+//　他の容疑者も即日逮捕されたが、主犯格のＸＸＸＸは逃亡中＠警察は行方を追っている＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　他の容疑者も即日逮捕されたが、主犯格のＸＸＸＸは逃亡中。",
+		   NULL, "Cảnh sát nhanh chóng bắt giữ được bốn nghi can còn lại ngay trong buổi tối hôm ấy, nhưng tới giờ vẫn chưa xác định được vị trí của kẻ chủ mưu XXXXXX.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }		   
+	OutputLine(NULL, "警察は行方を追っている。",
+		   NULL, "Mọi lực lượng đều đã được huy động gấp rút để tìm ra tung tích của hắn càng nhanh càng tốt.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　動機につい＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　動機について",
+		   NULL, "Các nghi phạm khai rằng động cơ gây án của chúng là do ", Line_ContinueAfterTyping);
+
+
+
+//　「酒盛りをとがめられ口論になり、カッとなって殺した＠
+	OutputLine(NULL, "　「酒盛りをとがめられ口論になり、カッとなって殺した」",
+		   NULL, "\"uống rượu say rồi xích mích với nạn nhân nên đã dẫn đến hành động bộc phát.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　などと供述しているが、それぞれの自供に食い違いも多く、さらに追求するという￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　などと供述しているが、それぞれの自供に食い違いも多く、さらに追求するという。",
+		   NULL, "Tuy nhiên, sau khi tiến hành hỏi cung riêng biệt từng nghi phạm, cơ quan điều tra nhận thấy có nhiều điểm mâu thuẫn trong các lời khai. Quá trình điều tra hiện vẫn còn đang tiếp diễn.", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene("black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//gosub *tip_e
+//return
+
+
+}
+
+
+
+
+
+
+

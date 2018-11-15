@@ -1,0 +1,91 @@
+void main()
+{
+
+//■ダム推進派の夫婦の転落事故
+
+//*Sub_Tips_009
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene("black", 1000 );
+
+	DrawScene("background/simen3", 1000 );
+	PlayBGM( 1, "msys15", 128, 0 );
+//　昭和５５年６月ＸＸ日夕刊よ＠
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　昭和５５年６月ＸＸ日夕刊より",
+		   NULL, "Báo Pháp luật tháng Sáu năm 1980.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　ＸＸ日午後２時頃、鹿骨市雛見沢村Ｘ丁目、会社員ＸＸＸさんと妻ＸＸＸＸさんが＠
+//　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ＸＸ日午後２時頃、鹿骨市雛見沢村Ｘ丁目、会社員ＸＸＸさんと妻ＸＸＸＸさんが、",
+		   NULL, "<size=-3>Vào lúc 2 giờ chiều ngày XX tháng Sáu, tại một vách đá cao 27 mét thuộc địa phận Vườn Quốc gia Shirakawa,</size>", Line_WaitForInput);
+	OutputLine(NULL, "　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった。",
+		   NULL, " <size=-3>một đôi vợ chồng du khách quê ở làng Hinamizawa, thành phố Shishibone đã không may bị ngã xuống dòng sông phía dưới.</size>", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　警察と消防で下流を捜索し、同日夜７時頃、ＸＸＸさんの遺体を発見した＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　警察と消防で下流を捜索し、同日夜７時頃、ＸＸＸさんの遺体を発見した。",
+		   NULL, "Sau đó, lúc 7 giờ tối cùng ngày, lực lượng cứu hộ đã phát hiện thi thể của ông XXX.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　妻のＸＸＸＸさんは依然見つかっていない＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　妻のＸＸＸＸさんは依然見つかっていない。",
+		   NULL, "Các thợ lặn phải ròng rã ngày đêm để xác định vị trí của vợ ông ta, bà XXXXX, nhưng cho tới nay vẫn chưa có kết quả.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　渓流は先日の台風３号の影響で増水しており、捜索は難航している￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　渓流は先日の台風３号の影響で増水しており、捜索は難航している。",
+		   NULL, "Theo thông tin từ phía lực lượng chức năng, quá trình tìm kiếm nạn nhân gặp phải rất nhiều trở ngại do ảnh hưởng của cơn bão số 3 vừa qua.", Line_Normal);
+	ClearMessage();
+
+//　ＸＸさん夫妻は展望台で柵にもたれかかっていた所、柵が壊れ転落した模様＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ＸＸさん夫妻は展望台で柵にもたれかかっていた所、柵が壊れ転落した模様。",
+		   NULL, "Điều tra sơ bộ cho thấy nguyên nhân gây tai nạn là do phần rào chắn vực mà đôi vợ chồng này đứng tựa lưng vào để nghỉ ngơi bất ngờ bị gãy.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　柵は老朽化しており、警察は公園内の設備管理が適正だったか関係者から事情を聞いている￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　柵は老朽化しており、警察は公園内の設備管理が適正だったか関係者から事情を聞いている。",
+		   NULL, "Hiện tại, cơ quan điều tra đang khẩn trương làm việc với Ban Quản lý Vườn Quốc gia Shirakawa để tìm ra sai sót trong quá trình tu sửa và bảo dưỡng cảnh quan khu vực.", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene("black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+
+
+
+}
+
+
+
+

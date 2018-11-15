@@ -1,0 +1,1979 @@
+void main()
+{
+
+//*Utiage
+//gosub *Omake_s
+//＜おまけコーナー＞
+//■おつかれさま会
+//※たくさんの人物が出てくるので、わかりにくい場所は適宜補記します。
+//　誰のセリフか自信がなくなったら聞いてね☆
+//　以下は（当然）レナのセリフからスタート。
+//　背景は例のファミレス。
+//　作品に登場した俳優たちが打ち上げをやる、という雰囲気で☆
+//csp -1
+
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, FALSE );
+	FadeOutBGM( 3, 1000, TRUE );
+//	SetFontOfMessage( 2, 24, 1) ;
+	SetValidityOfSaving( TRUE );
+//	SetValidityOfLoading( TRUE );
+	SetValidityOfInput( TRUE );
+	SetValidityOfSkipping( TRUE );
+//	ActivateScreenEffectForcedly( TRUE );
+
+	DisableWindow();
+	DrawScene("black", 1000 );
+////setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
+//!sd
+
+//gosub *data_tati
+
+	DisableWindow();
+	DrawScene("background/res1", 1000 );
+	PlayBGM( 1, "msys01", 128, 0 );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_warai_a1_", "2", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
+
+//「この度は当サークル、０７ｔｈ　Ｅｘｐａｎｓｉｏｎのノベルゲーム＠ひぐらしのなく頃に～鬼隠し編～をお買い上げ下さいまして、誠にありがとうございました＠　いかがだったでしょうか＠　ちょっぴりでもお楽しみいただけたなら幸いです。￥
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200103", 256, TRUE);
+	OutputLine(NULL, "「この度は当サークル、０７ｔｈ　Ｅｘｐａｎｓｉｏｎのノベルゲーム、",
+		   NULL, "\"Vâng, xin cảm ơn các bạn độc giả đã chọn đọc \"Khi Ve Sầu Khóc ~Chương 1: Quỷ Bắt Hồn~\",", Line_Continue);
+	OutputLine(NULL, "ひぐらしのなく頃に〜鬼隠し〜をお買い上げ下さいまして、誠にありがとうございました！",
+		   NULL, " một tác phẩm tiểu thuyết trực quan của 07th Expansion!\"", Line_WaitForInput);
+	ClearMessage();	
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }	
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200104", 256, TRUE);
+	OutputLine(NULL, "　いかがだったでしょうか？",
+		   NULL, "\"Cảm nghĩ của bạn về tác phẩm ra sao?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200105", 256, TRUE);
+	OutputLine(NULL, "　ちょっぴりでもお楽しみいただけたなら幸いです。」",
+		   NULL, " Chỉ cần các bạn ưa thích câu chuyện một chút thôi là bọn mình cũng mãn nguyện lắm rồi.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_odoroki_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
+
+//「ちょっぴりも何も＠　あんなすごいバッドエンドで終わられたら、ぷんぷんでございますのことよー？！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400127", 256, TRUE);
+	OutputLine(NULL, "「ちょっぴりも何も！",
+		   NULL, "\"Chả có chút chiếc gì ở đây hết!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400128", 256, TRUE);
+	OutputLine(NULL, "　あんなすごいバッドエンドで終わられたら、ぷんぷんでございますのことよー？！」",
+		   NULL, " Em vẫn còn đang bừng bừng lửa giận vì cái kết bi thảm đó đây nè!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_niko_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「…ぷんぷんなのです。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500082", 256, TRUE);
+	OutputLine(NULL, "「…ぷんぷんなのです。」",
+		   NULL, "\"...Bừng bừng đây nè.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_def_a1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+// レナrvS20/02/440200106.「あははは！kvS20/02/440200107.　今回の『鬼隠し』は、全体の謎に挑む人たちが最初に通るお話。kvS20/02/440200108.だから実質上のプロローグの位置づけなんだって」
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200106", 256, TRUE);
+	OutputLine(NULL, "「あははは！",
+		   NULL, "\"Ahehehe!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200107", 256, TRUE);
+	OutputLine(NULL, "今回の『鬼隠し』は、全体の謎に挑む人たちが最初に通るお話。",
+		   NULL, " Chương \"Quỷ Bắt Hồn\" này là câu chuyện đầu tiên chào đón những độc giả muốn thử thách bí ẩn của toàn bộ thiên tiểu thuyết mà.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200108", 256, TRUE);
+	OutputLine(NULL, "だから実質上のプロローグの位置づけなんだって。」",
+		   NULL, " Vậy nên thực ra ta nên gọi nó là phần \"Mở đầu\" mới đúng chứ nhỉ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa1a_akireru_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「そのプロローグが…こんな凄まじいバッドエンドでございますのー？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400129", 256, TRUE);
+	OutputLine(NULL, "「そのプロローグが…こんな凄まじいバッドエンドでございますのー？」",
+		   NULL, "\"Phần Mở đầu kiểu gì... mà lại đập ngay cái kết khó nuốt vậy vào mặt người ta chứ?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(2, 3, "sprite/normal/me1a_wink_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+//「うーん、でもそーゆうのってあるじゃん＠
+//　この最悪のバッドエンドを回避するために、プレイヤーさんが物語を模索していくのがサウンドノベルだし。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300249", 256, TRUE);
+	OutputLine(NULL, "「うーん、でもそーゆうのってあるじゃん？",
+		   NULL, "\"Ờ, thế cũng có gì lạ đâu em?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300250", 256, TRUE);
+	OutputLine(NULL, "　この最悪のバッドエンドを回避するために、プレイヤーさんが物語を模索していくのがこの作品の醍ご味だし」",
+		   NULL, " Ý đồ của tác phẩm là muốn độc giả phải cố gắng xoay sở để tránh khiến câu chuyện đi tới kết thúc xấu như vậy mà.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeAllBustshots( 400, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_warai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「…まだ第一話ですよ。ボクは次のお話が楽しみなのです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500083", 256, TRUE);
+	OutputLine(NULL, "「…まだ第一話ですよ。ボクは次のお話が楽しみなのです。」",
+		   NULL, "\"...Đây mới chỉ là chương đầu tiên thôi. Em mong được đọc chương tiếp theo lắm đó.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「次の話はどんなのになるわけ＠　レナは聞いてるー？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300251", 256, TRUE);
+	OutputLine(NULL, "「これから、どんな話が待ち受けてるんだろう？",
+		   NULL, "\"Những sự kiện mới gì đang đón chờ chúng ta đây?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300252", 256, TRUE);
+	OutputLine(NULL, "　レナは聞いてるー？」",
+		   NULL, " Rena có biết không?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_warai_a1_", "2", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+// レナrvS20/02/440200109.「うん。kvS20/02/440200110.今回はレナをパートナーに選んだ物語だったけど、kvS20/02/440200111.他にも魅ぃちゃん、沙都子ちゃんをパートナーに選んだお話もあるみたいだね」
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200109", 256, TRUE);
+	OutputLine(NULL, "「うん。",
+		   NULL, "\"Ừm.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200110", 256, TRUE);
+	OutputLine(NULL, "今回はレナをパートナーに選んだ物語だったけど、",
+		   NULL, " Chương này thì tập trung chủ yếu vào Rena rồi,", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200111", 256, TRUE);
+	OutputLine(NULL, "他にも魅ぃちゃん、沙都子ちゃんをパートナーに選んだお話もあるみたいだね。」",
+		   NULL, " nhưng hình như cũng có cả những chương tập trung chủ yếu vào Mii-chan và Satoko-chan nữa đó.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(3, 4, "sprite/normal/sa1a_akireru_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
+
+// 沙都子rvS20/04/440400131.「他のシナリオにはどんな展開があるんですの？」
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400131", 256, TRUE);
+	OutputLine(NULL, "「他のシナリオにはどんな展開があるんですの？」",
+		   NULL, "\"Những tình huống mới đó sẽ đóng góp gì vào dòng chảy của mạch truyện chính đây?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "m1", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_def_b1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「今回の鬼隠し編では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ＠
+//　次回のシナリオでは雛見沢の古い歴史なんかが紹介されるんですって。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200115", 256, TRUE);
+	OutputLine(NULL, "「今回の『鬼隠し』では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ？",
+		   NULL, "\"Chương \"Quỷ Bắt Hồn\" này đã giới thiệu cho độc giả biết về chuỗi chết chóc bí ẩn xảy ra trong những năm gần đây tại Hinamizawa rồi nhỉ?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200116", 256, TRUE);
+	OutputLine(NULL, "　たとえば魅ぃちゃんのシナリオでは雛見沢の古い歴史なんかが紹介されるんだって」",
+		   NULL, " Chương tiếp theo sẽ tập trung vào Mii-chan và lịch sử Hinamizawa thời xưa đó.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1b_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「異常事態の連続ですっかりわかんなくなっちゃったけど……オヤシロさまの祟りって、どういうものなのか＠いやそもそも、オヤシロさまって何なのか、あまり説明なかったからね。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300255", 256, TRUE);
+	OutputLine(NULL, "「異常事態の連続ですっかりわかんなくなっちゃったけど……オヤシロさまの祟りって、どういうものなのか。",
+		   NULL, "\"Từ lúc đống sự kiện bất thường dồn dập ập tới là chị đã chẳng hiểu nổi gì nữa rồi... Rốt cuộc lời nguyền của Oyashiro-sama là sao chứ?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300256", 256, TRUE);
+	OutputLine(NULL, "いやそもそも、オヤシロさまって何なのか、あまり説明なかったからね。」",
+		   NULL, " Mà thực ra thì Oyashiro-sama là gì nhỉ, trong truyện cũng chẳng giải thích rõ ràng gì hết.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	ModDrawCharacter(3, 2, "sprite/normal/re1a_komaru_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「…う～ん、よくは聞いてないんだけど…＠……でも……なんか嫌ぁな予感。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200117", 256, TRUE);
+	OutputLine(NULL, "「…う〜ん、よくは聞いてないんだけど…。",
+		   NULL, "\"...Ừmmm~, em cũng không rõ lắm.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200118", 256, TRUE);
+	OutputLine(NULL, "……でも……なんか嫌ぁな予感。」",
+		   NULL, " Nhưng hẳn là... chẳng tốt đẹp gì đâu chị ạ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(2, 5, "sprite/normal/ri1_warai_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//「……またしても祟られそうな、嫌な物語です。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500087", 256, TRUE);
+	OutputLine(NULL, "「……またしても祟られそうな、嫌な物語です。」",
+		   NULL, "\"...Chắc lời nguyền sẽ lại giáng xuống và khiến câu chuyện trở nên đáng sợ nhỉ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(1, 3, "sprite/normal/me1a_warai_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「圭ちゃんも大変だねぇ～＠　今度はどんなタタリにやられるやら！￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300257", 256, TRUE);
+	OutputLine(NULL, "「圭ちゃんも大変だねぇ〜！",
+		   NULL, "\"Khổ thân Kei-chan rồi~!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300258", 256, TRUE);
+	OutputLine(NULL, "　今度はどんなタタリにやられるやら！」",
+		   NULL, " Lần tới cậu ta sẽ bị lời nguyền hành hạ kiểu gì đây?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeAllBustshots( 400, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa1a_warai_a1_", "1", "m1", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「でも、どんなお話になるのか楽しみにございますわね！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400132", 256, TRUE);
+	OutputLine(NULL, "「でも、どんなお話になるのか楽しみでございますわね！」",
+		   NULL, "\"Em mong được biết những diễn biến tiếp theo của câu chuyện quá!\"", Line_Normal);
+	ClearMessage();
+////setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
+	DisableWindow();
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	PlaySE( 4, "wa_013", 128, 64 );
+	DrawScene("white", 10 );
+	DrawScene("background/res5", 50 );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+////setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
+
+//!sd
+	PlayBGM( 1, "msys02", 128, 0 );
+//「いやいやいやいや、遅れてすみませんねぇ。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700335", 256, TRUE);
+	OutputLine(NULL, "「いやいやいやいや、遅れてすみませんねぇ。」",
+		   NULL, "\"Ái chà chà chà, xin lỗi vì đến trễ nhé.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_def_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「やぁみんな＠　お疲れ様！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800065", 256, TRUE);
+	OutputLine(NULL, "「やぁみんな！",
+		   NULL, "\"Chào mọi người!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800066", 256, TRUE);
+	OutputLine(NULL, "　お疲れ様！」",
+		   NULL, " Đã vất vả rồi nhỉ!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_warai_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「お疲れ～！＠　あれ？　圭ちゃんはー？＠
+//「圭一くんはもう、次のシナリオの台本読みに行っちゃってるんだよ＠主人公だから大変だね！￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300259", 256, TRUE);
+	OutputLine(NULL, "「お疲れ〜！！",
+		   NULL, "\"Anh cũng vất vả rồi~!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300260", 256, TRUE);
+	OutputLine(NULL, "　あれ？　圭ちゃんはー？」",
+		   NULL, " Ơ kìa? Kei-chan đâu?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800067", 256, TRUE);
+	OutputLine(NULL, "「圭一くんはもう、次のシナリオの台本読みに行っちゃってるんだよ。",
+		   NULL, "\"Keiichi-kun tranh thủ lấy kịch bản chương tiếp theo ra xem trước rồi.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800068", 256, TRUE);
+	OutputLine(NULL, "主人公だから大変だね！」",
+		   NULL, " Đóng vai chính đúng là vất vả thật!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_nande_a1_", "1", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「…あれー＠…残念ですね＠ちょっとだけでも顔を出してくれればよかったのに。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200119", 256, TRUE);
+	OutputLine(NULL, "「…あれー。",
+		   NULL, "\"...Ơ kìa...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200120", 256, TRUE);
+	OutputLine(NULL, "…残念ですね。",
+		   NULL, " Chán cậu ấy thật đấy.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200121", 256, TRUE);
+	OutputLine(NULL, "ちょっとだけでも顔を出してくれればよかったのに。」",
+		   NULL, " Ló mặt ra chào độc giả một câu thôi cũng không chịu.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(2, 5, "sprite/normal/ri1_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//「………きっと立ち絵がないので登場できないのです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500088", 256, TRUE);
+	OutputLine(NULL, "「………きっと喋るワード数が多すぎて居残りなのです。」",
+		   NULL, "\"...Chắc do thấy có nhiều lời thoại quá nên anh ấy nán lại thu âm trước luôn đó ạ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_2_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+// 大石rvS20/11/440700336.「そりゃ古手さん、仕方がありませんよ。kvS20/11/440700337.前原さんの台詞だけで普通のアドベンチャーゲームなら全員分の量がありますからね～。kvS20/11/440700338.んっふっふっふ！」
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700336", 256, TRUE);
+	OutputLine(NULL, "「そりゃ古手さん、仕方がありませんよ。",
+		   NULL, "\"Đúng rồi đấy Furude-san, do hoàn cảnh bất đắc dĩ thôi.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700337", 256, TRUE);
+	OutputLine(NULL, "前原さんの台詞だけで普通のアドベンチャーゲームなら全員分の量がありますからね～。",
+		   NULL, "Tổng số lời thoại của Maebara-san tính ra cũng xấp xỉ tầm cả một dàn nhân vật trong tiểu thuyết trực quan bình thường mà~", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700338", 256, TRUE);
+	OutputLine(NULL, "んっふっふっふ！」",
+		   NULL, " Nfufufu!\"", Line_Normal)
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("black", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/res1", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 8, "sprite/normal/tomi1_def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「しかし…圭一くんやレナちゃんなんか特にだけど、大変なお話だったねぇ！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800069", 256, TRUE);
+	OutputLine(NULL, "「しかし…圭一くんやレナちゃんなんか特にだけど、大変なお話だったねぇ！」",
+		   NULL, "\"Mà... Công nhận là câu chuyện trong chương này đã khiến mọi người phải vất vả rồi nhỉ, đặc biệt là Keiichi-kun và Rena-chan!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa1a_odoroki_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「大変も何も！　大々バッドエンドでございますわー！！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400133", 256, TRUE);
+	OutputLine(NULL, "「大変も何も！　大々バッドエンドでございますわー！！」",
+		   NULL, "\"Gì mà vất với chả vả! Kết thúc tối thui như tiền đồ chị Dậu ấy!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_nande_a1_", "1", "up", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+//「結局…圭一くんを襲った者の正体って何なのかしら。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200122", 256, TRUE);
+	OutputLine(NULL, "結局…圭一くんを襲ったのって、正体は何なんだろう……？",
+		   NULL, "\"Rốt cuộc thì... chân tướng của thứ tấn công Keiichi-kun là gì vậy nhỉ?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(3, 8, "sprite/normal/tomi1_warai_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「祟りに見せかけておいて、実は人間の仕業…ってのが僕の推理なんだけどね。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800070", 256, TRUE);
+	OutputLine(NULL, "「祟りに見せかけておいて、実は人間の仕業…ってのが僕の推理なんだけどね。」",
+		   NULL, "\"Anh nghĩ lời nguyền chỉ là vỏ bọc, chứ thực ra mọi chuyện đều do con người sắp đặt cả.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeAllBustshots( 400, TRUE );
+	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri1_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「……でも圭一、最後な電話をしてましたです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500089", 256, TRUE);
+	OutputLine(NULL, "「……でも圭一は、最期に謎の電話をかけてきていましたのです。」",
+		   NULL, "\"...Nhưng cuộc điện thoại cuối cùng của Keiichi lại rất khó lý giải đó ạ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_tokui_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「うん＠私もあの電話は変だと思ったね＠
+//　あの時点で圭ちゃんは犯人は人間だと確信してたはずなのにさ。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300261", 256, TRUE);
+	OutputLine(NULL, "「うん。",
+		   NULL, "\"Ừm.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300262", 256, TRUE);
+	OutputLine(NULL, "私もあの電話は変だと思ったね。",
+		   NULL, " Chị cũng thấy khó hiểu lắm.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300263", 256, TRUE);
+	OutputLine(NULL, "　あの時点で圭ちゃんは犯人は人間だと確信してたはずなのにさ。」",
+		   NULL, " Lẽ ra lúc đó Kei-chan phải hoàn toàn chắc chắn rằng con người đứng sau mọi chuyện rồi chứ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_def_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「……おかしな電話でしたわよね＠なんかオバケに追いかけられてる、みたいな。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400134", 256, TRUE);
+	OutputLine(NULL, "「……おかしな電話でしたわよね。",
+		   NULL, "\"...Cuộc điện thoại đó quả thật là quá ư kì lạ.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400135", 256, TRUE);
+	OutputLine(NULL, "なんかオバケに追いかけられてる、みたいな。」",
+		   NULL, " Anh ấy cứ làm như thể đang bị ma đuổi ấy.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_komaru_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「あの電話だけだと…やっぱり犯人って人間じゃなくて、祟りなのかなって思っちゃうよね。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200123", 256, TRUE);
+	OutputLine(NULL, "「あの電話だけだと…やっぱり犯人って人間じゃなくて、祟りなのかなって思っちゃうよね。」",
+		   NULL, "\"Chỉ một mình chi tiết cuộc điện thoại đó... cũng đủ khiến độc giả nghĩ rằng mọi chuyện xảy ra là do lời nguyền chứ không phải con người lập mưu nhỉ.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	PlayBGM( 1, "msys01", 128, 0 );
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_2_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「せっかくですから、意見を出してみようじゃあないですか＠じゃー園崎さんから。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700339", 256, TRUE);
+	OutputLine(NULL, "「せっかくですから、意見を出してみようじゃありませんか。",
+		   NULL, "\"Nhân dịp đông đủ thế này, hay là mọi người thử chia sẻ quan điểm của mình xem sao.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700340", 256, TRUE);
+	OutputLine(NULL, "じゃー園崎さんから。」",
+		   NULL, " Xin mời Sonozaki-san khai cuộc.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1b_wink_a1_", "2", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「私は絶対に人間説＠
+//　雛見沢の怪しい昔語りかなんかになぞらえて、誰かが起こしてる人為的事件だと思うね！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300264", 256, TRUE);
+	OutputLine(NULL, "「私は絶対に人間説！",
+		   NULL, "\"Cháu chắc chắn là con người sắp đặt!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300265", 256, TRUE);
+	OutputLine(NULL, "　雛見沢の怪しい昔語りかなんかになぞらえて、誰かが起こしてる人為的事件だと思うね！」",
+		   NULL, "\"Theo cháu thì có nhóm người nào đó đang cố tái hiện lại những hủ tục thời xa xưa của Hinamizawa!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「確かに＠毎年、お祭りの日になると起こる連続怪死事件なんて、怪しいもんね。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200124", 256, TRUE);
+	OutputLine(NULL, "「確かに。",
+		   NULL, "\"Em tán thành.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200125", 256, TRUE);
+	OutputLine(NULL, "毎年、お祭りの日になると起こる連続怪死事件なんて、怪しいもんね。」",
+		   NULL, " Năm nào cũng vậy, cứ đến ngày lễ hội là chuỗi chết chóc quái đản lại tiếp diễn, đúng là vô cùng đáng nghi.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(1, 3, "sprite/normal/me1a_akuwarai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「その連続怪死って言うのも、きっと、何かの昔語りの再現なんだよ。きっと！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300266", 256, TRUE);
+	OutputLine(NULL, "「その連続怪死って言うのも、何かの昔語りの再現なんだよ。きっと！」",
+		   NULL, "\"Mục đích ẩn sau chuỗi chết chóc quái đản ấy là để tái hiện lại hủ tục xưa cũ nào đó. Chắc chắn thế!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res1", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「私はタタリだと思いましてよ！＠
+//　玄関で圭一さんが暴れたシーンとか、ラストの電話のシーンとかを見れば、人間が犯人では説明がつきませんもの。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400136", 256, TRUE);
+	OutputLine(NULL, "「私はタタリだと思いましてよ！！",
+		   NULL, "\"Em theo phe lời nguyền!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400137", 256, TRUE);
+	OutputLine(NULL, "　玄関で圭一さんが暴れたシーンとか、ラストの電話のシーンとかを見れば、人間が犯人では説明がつきませんもの。」",
+		   NULL, "\"Giả thiết con người là chủ mưu đâu thể nào giải thích được đoạn Keiichi-san đập phá ngoài thềm cửa và cuộc điện thoại ở cuối chuyện cơ chứ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_komaru_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「そう言えばそうよね…＠とても人間の仕業とは思えないシーンだったし。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200126", 256, TRUE);
+	OutputLine(NULL, "「そう言えばそうだよね…。",
+		   NULL, "\"Em nói vậy nghe cũng đúng...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200127", 256, TRUE);
+	OutputLine(NULL, "とても人間の仕業とは思えないシーンだったし。」",
+		   NULL, " Thật khó mà tin được rằng con người có thể dàn xếp ra được những tình huống như thế.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_komaru_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「…うーん、僕はそれでも……人間が犯人だと思うねぇ＠
+//　あの玄関やラストのシーンは、追い詰められた圭一くんの、被害意識からの妄想じゃないかって思うんだ。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800071", 256, TRUE);
+	OutputLine(NULL, "「…うーん、僕はそれでも……人間が犯人だと思うねぇ。",
+		   NULL, "\"...Ừm, dù vậy thì... anh vẫn nghĩ là có con người đứng đằng sau.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800072", 256, TRUE);
+	OutputLine(NULL, "　あの玄関やラストのシーンは、追い詰められた圭一くんの、被害意識からの妄想じゃないかって思うんだ。」",
+		   NULL, "\"Trong hai cảnh đó, chắc là do phải chịu áp lực quá lớn nên tâm trí Keiichi-kun bị tổn thương, dẫn tới hoang tưởng thôi.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1b_odoroki_b1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「む、難しい言葉を使われてもわかりませんわー！！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400138", 256, TRUE);
+	OutputLine(NULL, "「む、難しい言葉を使われてもわかりませんわー！！」",
+		   NULL, "\"A-Anh nói kiểu phức tạp vậy thì sao mà em hiểu nổi!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「……つまり、怖がりの圭一が見た幻だと言ってるのです。＠
+//「じゃじゃ、じゃああのシーンの正体は…、圭一の後ろにいた謎の気配は何なんですのー？！￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500090", 256, TRUE);
+	OutputLine(NULL, "「……つまり、怖がりの圭一が見た幻だと言ってるのです。」",
+		   NULL, "\"...Nghĩa là vì sợ quá nên Keiichi tự tưởng tượng linh tinh ấy mà.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400139", 256, TRUE);
+	OutputLine(NULL, "「じゃじゃ、じゃああのシーンの正体は…、圭一さんの後ろにいた謎の気配は何なんですのー？！」",
+		   NULL, "\"Nhưng mà nhưng mà... Ý nghĩa thực sự của cảnh đó là sao chứ...? Rốt cuộc thì Keiichi-san bị thứ gì bám theo sau lưng vậy!?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_akuwarai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「引っ掛けだよ。ヒッカケ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300267", 256, TRUE);
+	OutputLine(NULL, "「引っ掛けだよ。ヒッカケ。」",
+		   NULL, "\"Là cú lừa chứ sao. C-ú-l-ừ-a.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_bikkuri_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「魅ぃちゃん、引っ掛けってどうゆう意味？＠
+//「富竹のおじさまが言うようにさ、あのシーンは追い詰められた圭ちゃんの被害妄想のシーンなんだよ＠
+//　それを濃密に描くことで、プレイヤーに祟りだと思わせようとする演出なんだよ＠だから引っ掛けってワケ！￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200128", 256, TRUE);
+	OutputLine(NULL, "「魅ぃちゃん、引っ掛けってどうゆう意味？」",
+		   NULL, "\"Cú lừa chỗ nào vậy Mii-chan?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300268", 256, TRUE);
+	OutputLine(NULL, "「富竹のおじさまが言うようにさ、あのシーンは追い詰められた圭ちゃんの被害妄想のシーンなんだよ。",
+		   NULL, "\"Anh Tomitake vừa nói rồi còn gì nữa, do Kei-chan bị sang chấn tâm lý quá nặng nề nên sinh hoang tưởng thôi.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300269", 256, TRUE);
+	OutputLine(NULL, "　それを濃密に描くことで、プレイヤーに祟りだと思わせようとする演出なんだよ。",
+		   NULL, "\"Khắc họa hai cảnh đó quá sức chi tiết như vậy chính là ý đồ của tác giả nhằm đánh lạc hướng suy nghĩ của người đọc sang giả thiết lời nguyền.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300270", 256, TRUE);
+	OutputLine(NULL, "だから引っ掛けってワケ！」",
+		   NULL, " Cú lừa chứ còn gì nữa!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawSceneWithMask("background/res1", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_akireru_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「そ、それを言われると……むむむー……でもでも………。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400140", 256, TRUE);
+	OutputLine(NULL, "「そ、それを言われると……むむむー……でもでも………。」",
+		   NULL, "\"Chị nói vậy nghe cũng đúng... Ừmmm~... Nhưng mà, nhưng mà...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_warai_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「ははは、まぁそういう可能性もあるってことだよ。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800073", 256, TRUE);
+	OutputLine(NULL, "「ははは、まぁそういう可能性もあるってことだよ。」",
+		   NULL, "\"Hahaha, mà đó cũng chỉ là một khả năng thôi.\"", Line_Normal);
+	ClearMessage();
+
+//＜＜＜＜※富竹さん※
+	DisableWindow();
+	FadeAllBustshots( 400, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_nande_a1_", "1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+//「だとすると…犯人は複数で村ぐるみって言う、劇中の大石さんの推理は正しいのかな＠
+//　当の本人の大石さんはどう思いますか？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200129", 256, TRUE);
+	OutputLine(NULL, "「だとすると…犯人は複数で村ぐるみって言う、劇中の大石さんの推理は正しいのかな？",
+		   NULL, "\"Nếu vậy thì... giả thiết mà Ooishi-san đề ra trong câu chuyện, rằng toàn bộ dân làng thông đồng với nhau dàn xếp mọi chuyện, là đúng sao?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200130", 256, TRUE);
+	OutputLine(NULL, "　当の本人の大石さんはどう思いますか？」",
+		   NULL, "\"Xin hỏi ý kiến của đích thân Ooishi-san ạ?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_2_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「私ですか＠　なっはっはっは……＠……うーん＠悩みますねぇ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700341", 256, TRUE);
+	OutputLine(NULL, "「私ですか？",
+		   NULL, "\"Tôi á?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700342", 256, TRUE);
+	OutputLine(NULL, "　なっはっはっは……。",
+		   NULL, " Ahahaha...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700343", 256, TRUE);
+	OutputLine(NULL, "……うーん。",
+		   NULL, " Hừmmm...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700344", 256, TRUE);
+	OutputLine(NULL, "悩みますねぇ。」",
+		   NULL, " Tốn não phết đấy nhỉ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 8, "sprite/normal/tomi1_def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「あれ＠　僕はてっきり、大石さんは人間説だと思ってましたけど。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800074", 256, TRUE);
+	OutputLine(NULL, "「あれ？",
+		   NULL, "\"Ơ kìa?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800075", 256, TRUE);
+	OutputLine(NULL, "　僕はてっきり、大石さんは人間説だと思ってましたけど。」",
+		   NULL, " Vậy mà cháu cứ đinh ninh là Ooishi-san sẽ theo phe con người đấy.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(1, 11, "sprite/normal/oisi1_1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「……劇中の私は犯人は人間だと断じてますが、人間が犯人だとすると、いろいろ不可解なことが多いんですよ。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700345", 256, TRUE);
+	OutputLine(NULL, "「……劇中の私は犯人は人間だと断じてますが、人間が犯人だとすると、いろいろ不可解なことが多いんですよ。」",
+		   NULL, "\"...Diễn theo kịch bản vậy thôi chứ giả thiết chủ mưu là con người cũng có nhiều lỗ hổng lắm.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//「例えばどんな＠　大石刑事さんの推理をお聞かせてください…！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200131", 256, TRUE);
+	OutputLine(NULL, "「例えばどんな？",
+		   NULL, "\"Bác thử nêu vài ví dụ được không ạ?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200132", 256, TRUE);
+	OutputLine(NULL, "　大石刑事さんの推理をお聞かせてください…！」",
+		   NULL, " Hãy cùng lắng nghe quan điểm của Thanh tra Ooishi nào!\"", Line_Normal);
+	ClearMessage();
+
+//      ;＜＜＜※レナ
+
+
+//「まず人間が犯人だとすると、絶対に動機が必要なんです＠…こういうことをして誰が得をするのか、ってことなんです。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700346", 256, TRUE);
+	OutputLine(NULL, "「まず人間が犯人だとすると、絶対に動機が必要なんです。",
+		   NULL, "\"Nếu con người thực sự là chủ mưu thì trước hết chúng phải có động cơ phạm tội...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700347", 256, TRUE);
+	OutputLine(NULL, "…こういうことをして誰が得をするのか、ってことなんです。」",
+		   NULL, " Chẳng ai lại bỏ công ra làm những chuyện không đem về lợi ích cho mình cả.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1b_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「つまりおじさま、人間が犯人なら、連続怪死事件を起こすことによって、誰かが得をしなくちゃいけない、ってこと？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300271", 256, TRUE);
+	OutputLine(NULL, "「つまりおじさま、人間が犯人なら、連続怪死事件を起こすことによって、誰かが得をしなくちゃいけない、ってこと？」",
+		   NULL, "\"Ý bác là nếu thực sự có bàn tay con người sắp đặt chuỗi chết chóc quái dị thì chúng phải thu về được lợi ích gì đó đúng không?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	DisableWindow();
+	ModDrawCharacter(1, 11, "sprite/normal/oisi1_2_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「そういうことです＠ダム開発の関係者が死ぬ内は利害も感じられましたが、近年の犠牲者はそれとも無縁です＠
+//　…第一、圭一くんを殺して誰が得をすると言うんです？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700348", 256, TRUE);
+	OutputLine(NULL, "「そういうことです。",
+		   NULL, "\"Chính xác.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700349", 256, TRUE);
+	OutputLine(NULL, "ダム開発の関係者が死ぬ内は利害も感じられましたが、近年の犠牲者はそれとも無縁です。",
+		   NULL, " Nếu tất cả các nạn nhân đều dính dáng tới dự án xây đập thì xem chừng còn hợp lý, nhưng những nạn nhân về sau lại chẳng hề liên quan.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700350", 256, TRUE);
+	OutputLine(NULL, "　…第一、前原さんを殺して誰が得をすると言うんです？」",
+		   NULL, "\"...Khó hiểu nhất vẫn là, khử Maebara-san thì ai được lợi cơ chứ?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 8, "sprite/normal/tomi1_def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「なるほど＠…そう言われると…僕も弱いな……。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800076", 256, TRUE);
+	OutputLine(NULL, "「なるほど。",
+		   NULL, "\"Ra thế...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800077", 256, TRUE);
+	OutputLine(NULL, "…そう言われると…僕も弱いな……。」",
+		   NULL, " Vậy theo ý chú thì... trường hợp của cháu cũng khá nan giải đấy...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「だってお金とかも盗られてないんですもの＠人間が犯人なわけありませんわー！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400141", 256, TRUE);
+	OutputLine(NULL, "「だってお金とかも盗られてないんですもの。",
+		   NULL, "\"Tiền bạc trên người anh có mất đồng nào đâu.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400142", 256, TRUE);
+	OutputLine(NULL, "人間が犯人なわけありませんわー！」",
+		   NULL, " Hung thủ không thể nào là con người được!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_nande_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「でも、そうとばかりは限らないんじゃない＠
+//　さっき魅ぃちゃんが言ったように、何かの昔語りの再現そのものに意味があるんだとしたら……。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200133", 256, TRUE);
+	OutputLine(NULL, "「でも、そうとばかりは限らないんじゃない？",
+		   NULL, "\"Không đơn giản như em nghĩ đâu.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200134", 256, TRUE);
+	OutputLine(NULL, "　さっき魅ぃちゃんが言ったように、何かの昔語りの再現そのものに意味があるんだとしたら……。」",
+		   NULL, "\"Mii-chan cũng nói khi nãy rồi, lỡ như có người muốn tái hiện lại hủ tục xa xưa vì lý do nào đó thì sao...\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res1", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1b_wink_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「そーゆーこと＠これは営利殺人じゃないんだよ＠きっとこれは…村の血塗られた歴史を再現するための………何らかの儀式的殺人じゃないかなって思うわけ！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300272", 256, TRUE);
+	OutputLine(NULL, "「そーゆーこと。",
+		   NULL, "\"Chuẩn đấy!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300273", 256, TRUE);
+	OutputLine(NULL, "これは営利殺人じゃないんだよ。",
+		   NULL, " Tội gì mà cứ phải gò bó suy luận theo hướng giết người cướp của.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300274", 256, TRUE);
+	OutputLine(NULL, "きっとこれは…村の血塗られた歴史を再現するための………何らかの儀式的殺人じゃないかなって思うわけ！」",
+		   NULL, " Chắc chắn là... chúng muốn tái hiện lại lịch sử đẫm máu của làng... và xem giết người như một dạng nghi lễ gì đó!\"", Line_Normal);
+
+	ClearMessage();
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「……では聞きますですが、それを再現すると誰か得をするのですか…？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500091", 256, TRUE);
+	OutputLine(NULL, "「……では聞きますですが、それを再現すると誰か得をするのですか…？」",
+		   NULL, "\"...Vậy em xin mạn phép hỏi lại, làm vậy thì ai được lợi...?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 8, "sprite/normal/tomi1_def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「得をするんじゃなくて…もっと心理的なもの＠……僕は……何かの復讐じゃないかと思うね＠土着的な何か＠…今回のシナリオでは騙られなかった因縁だよ！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800078", 256, TRUE);
+	OutputLine(NULL, "「得をするんじゃなくて…もっと心理的なもの。",
+		   NULL, "\"Lợi ích thì có lẽ... nghiêng về mặt tinh thần hơn.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800079", 256, TRUE);
+	OutputLine(NULL, "……僕は……何かの復讐じゃないかと思うね。",
+		   NULL, " Anh nghĩ... mục đích của chúng có thể có liên quan tới thù hằn ân oán,", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800080", 256, TRUE);
+	OutputLine(NULL, "土着的な何か。",
+		   NULL, " tập quán bản xứ...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800081", 256, TRUE);
+	OutputLine(NULL, "…今回のシナリオでは語られなかった因縁だよ！」",
+		   NULL, " hoặc chi tiết nào đó chưa được nhắc đến trong chương này!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「なるほど＠虐げられた某家の人たちが先祖の恨みを晴らすために…ってな感じですか＠　うーん………私はそれにも反対ですねぇ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700351", 256, TRUE);
+	OutputLine(NULL, "「なるほど。",
+		   NULL, "\"Hiểu rồi.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700352", 256, TRUE);
+	OutputLine(NULL, "過去に酷い扱いを受けた某家の人たちが先祖の恨みを晴らすために…ってな感じですか？",
+		   NULL, " Kiểu như... khi xưa từng có gia tộc nào đó bị đối xử bất công nên giờ đây hậu duệ của họ muốn rửa mối thù truyền kiếp cho tổ tiên ấy hả?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700353", 256, TRUE);
+	OutputLine(NULL, "　うーん………私はそれにも反対ですねぇ。」",
+		   NULL, " Hừmmm... Tôi lại không thích giả thiết đó cho lắm.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_tohoho_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「じゃー何。大石さんはまさか、祟り派なわけ？！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300275", 256, TRUE);
+	OutputLine(NULL, "「じゃー何。大石さんはまさか、祟り派なわけ？！」",
+		   NULL, "\"Vậy là sao? Chẳng lẽ Ooishi-san nghiêng về hướng lời nguyền có thật ư?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「そうですわそうですわ！＠　刑事役の大石さんが言うんですもの＠　タタリに決まってますわー！！￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400143", 256, TRUE);
+	OutputLine(NULL, "「そうですわそうですわ！！",
+		   NULL, "\"Đúng rồi đó đúng rồi đó!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400144", 256, TRUE);
+	OutputLine(NULL, "　刑事役の大石さんが言うんですもの！",
+		   NULL, " Đến cả Ooishi-san đóng vai thanh tra mà cũng tán thành nhé!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400145", 256, TRUE);
+	OutputLine(NULL, "　タタリに決まってますわー！！」",
+		   NULL, " Rõ ràng là lời nguyền có thật rồi!!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "m1", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「劇中で前原さんが言うように、オヤシロさまがレナさんや園崎さんに乗り移って悪さをしている…って考える＠……一番つじつまが合うんです＠残念ながら。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700354", 256, TRUE);
+	OutputLine(NULL, "「劇中で前原さんが言うように、オヤシロさまが竜宮さんや園崎さんに乗り移って悪さをしている…って考えると",
+		   NULL, "\"Trong câu chuyện, Maebara-san nghĩ rằng Ryuugu-san và Sonozaki-san trở nên tàn ác vì bị Oyashiro-sama điều khiển... ", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700355", 256, TRUE);
+	OutputLine(NULL, "……一番つじつまが合うんです。",
+		   NULL, " Và chính giả thiết đó lại ăn nhập nhất với các đầu mối hiện có.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700356", 256, TRUE);
+	OutputLine(NULL, "残念ながら。」",
+		   NULL, " Đáng tiếc là vậy đấy.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_nande_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「えっと……実は私も大石さんと同じ意見なの＠…あんなにやさしかったレナや魅ぃちゃんが突然おかしくなるなんて、そうじゃなきゃ説明つかないもの。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200135", 256, TRUE);
+	OutputLine(NULL, "「えっと……実はレナも大石さんと同じ意見なの。",
+		   NULL, "\"Ừmmm... Thực ra Rena cũng đồng quan điểm với Ooishi-san luôn.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200136", 256, TRUE);
+	OutputLine(NULL, "…あんなにやさしかったレナや魅ぃちゃんが突然おかしくなるなんて、そうじゃなきゃ説明つかないもの。」",
+		   NULL, " ...Thường ngày Rena và Mii-chan đều vô cùng tốt bụng mà lại đột ngột trở nên đáng sợ như vậy, đâu còn cách giải thích nào khác chứ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_majime_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「……そこは!s500………!sd魅音の私が言うのも変だけど…、やっぱり私なんだと思う。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300276", 256, TRUE);
+	OutputLine(NULL, "「……そこは",
+		   NULL, "\"...Về chuyện đó thì", Line_Continue);
+//!s500
+	SetSpeedOfMessage( TRUE, 0, );
+	OutputLine(NULL, "………",
+		   NULL, "...", Line_Continue);
+//!sd,
+	SetSpeedOfMessage( FALSE, 0, );
+
+	OutputLine(NULL, "魅音の私が言うのも変だけど…、やっぱり私なんだと思う。」",
+		   NULL, " Tự mình nói mình đúng là kì quặc thật, nhưng có lẽ... chính Mion là kẻ giật dây mọi chuyện đấy.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「……魅ぃの話の意味がわかりにくいですよ＠説明がほしいです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500092", 256, TRUE);
+	OutputLine(NULL, "「……魅ぃの話の意味がわかりにくいのですよ。",
+		   NULL, "\"...Em không hiểu ý Mii cho lắm.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500093", 256, TRUE);
+	OutputLine(NULL, "説明がほしいのです。」",
+		   NULL, " Chị giải thích rõ ràng đi ạ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(3, 3, "sprite/normal/me1b_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「あ、ごめん＠…つまりさ＠これってすっごく残酷な話なんじゃないかって思うんだよ。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300277", 256, TRUE);
+	OutputLine(NULL, "「あ、ごめん。",
+		   NULL, "\"A, xin lỗi nha.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300278", 256, TRUE);
+	OutputLine(NULL, "…つまりさ。",
+		   NULL, " Ý chị là...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300279", 256, TRUE);
+	OutputLine(NULL, "これってすっごく残酷な話なんじゃないかって思うんだよ。」",
+		   NULL, " có lẽ câu chuyện thực sự đau lòng lắm.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_komaru_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「え、……何、魅ぃちゃん＠…それってひょっとして……。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200137", 256, TRUE);
+	OutputLine(NULL, "「え、……何、魅ぃちゃん。",
+		   NULL, "\"Ơ... Gì vậy, Mii-chan...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200138", 256, TRUE);
+	OutputLine(NULL, "…それってひょっとして……。」",
+		   NULL, " Chẳng lẽ chị nghĩ...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 8, "sprite/normal/tomi1_komaru_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「突き詰めるとそうなるのかな＠…僕もちょっと疑ってる。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800082", 256, TRUE);
+	OutputLine(NULL, "「突き詰めるとそうなるのかな。",
+		   NULL, "\"Có khi lại đúng là vậy thật...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800083", 256, TRUE);
+	OutputLine(NULL, "…僕もちょっと疑ってる。」",
+		   NULL, " Anh cũng thấy hơi nghi nghi.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawSceneWithMask("background/res1", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「つまり、レナさんも園崎さんも、実は本当にああいう性格で、引っ越してきたばかりの前原さんを騙している悪魔なんだ、と＠…こういうわけですか？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700357", 256, TRUE);
+	OutputLine(NULL, "「つまり、竜宮さんも園崎さんも、実は本当にああいう性格で、引っ越してきたばかりの前原さんを騙している悪魔なんだ、と。",
+		   NULL, "\"Tức là tính cách của Ryuugu-san và Sonozaki-san thực sự quái dị như vậy ngay từ đầu, và vẻ tốt bụng của họ hồi Maebara-san mới chuyển nhà tới chỉ là giả tạo...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700358", 256, TRUE);
+	OutputLine(NULL, "…こういうわけですか？」",
+		   NULL, " Phải vậy không?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa1a_hannbeso_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「そんなの嫌ですわーーー！！！＠/
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400146", 256, TRUE);
+	OutputLine(NULL, "「そんなの嫌ですわーーー！！！！",
+		   NULL, "\"Không phải đâu mà~~~!!!!", Line_WaitForInput);
+
+	DisableWindow();
+	ModDrawCharacter(1, 4, "sprite/normal/sa1a_naku_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//　わぁあぁああぁああぁああん！！＠　これは全部祟りの仕業なんですのよー＠　レナさんも魅音さんもみんなやさしい、いい人がいいですのーーー！！！！￥
+
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400147", 256, TRUE);
+	OutputLine(NULL, "　わぁあぁああぁああぁああん！！！",
+		   NULL, " Uoaaaaaaaaaaaaaa!!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400148", 256, TRUE);
+	OutputLine(NULL, "　これは全部祟りの仕業なんですのよー！",
+		   NULL, " Tất cả là tại lời nguyền hết!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400149", 256, TRUE);
+	OutputLine(NULL, "　レナさんも魅音さんもみんなやさしい、いい人がいいのですのーーー！！！！」",
+		   NULL, " Rena-san, Mion-san và mọi người đều thân thiện và tốt bụng!!!!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_komaru_b1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「わ、私もそうだな＠　レナや魅音ちゃんって本当にいい人なんだって思う＠…きっと劇中で出てきた厳しいシーンは、何かに取り憑かれてたんだって思うの。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200139", 256, TRUE);
+	OutputLine(NULL, "「れ、レナもそうだな！",
+		   NULL, "\"R-Rena cũng nghĩ vậy!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200140", 256, TRUE);
+	OutputLine(NULL, "　レナや魅ぃちゃんって本当にいい人なんだって思う。",
+		   NULL, " Rena và Mii-chan đều là người tốt mà.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200141", 256, TRUE);
+	OutputLine(NULL, "…きっと劇中で出てきた厳しいシーンは、何かに取り憑かれてたんだって思うの。」",
+		   NULL, " ...Nhất định là do cả hai bị kiểm soát tâm trí nên câu chuyện mới trở nên cay nghiệt vậy thôi.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「レナも祟り派か＠じゃー祟り派の皆さんにお聞きしますけどさ＠…祟りが起こるからにはそれなりの理由があるんでしょ＠　無差別に祟るとは思えないなー＠そこんとこ説明できるの？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300280", 256, TRUE);
+	OutputLine(NULL, "「レナも祟り派か。",
+		   NULL, "\"Rena cũng theo phe lời nguyền à.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300281", 256, TRUE);
+	OutputLine(NULL, "じゃー祟り派の皆さんにお聞きしますけどさ。",
+		   NULL, " Vậy xin hỏi những người ủng hộ giả thiết lời nguyền một câu:\"", Line_Normal);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }		   
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300282", 256, TRUE);
+	OutputLine(NULL, "…祟りが起こるからにはそれなりの理由があるんでしょ？",
+		   NULL, "\"...Bị nguyền thì cũng phải có lý do chính đáng chứ, đúng không?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300283", 256, TRUE);
+	OutputLine(NULL, "　無差別に祟るとは思えないなー。",
+		   NULL, " Lời nguyền mà cứ giáng bừa bãi xuống đầu người ta vậy thì phi lý lắm.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300284", 256, TRUE);
+	OutputLine(NULL, "そこんとこ説明できるの？」",
+		   NULL, "\"Ai đó giải thích thử xem?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_odoroki_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「祟りは祟りですもの！＠　人間の考えでは想像もつきませんわー！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400150", 256, TRUE);
+	OutputLine(NULL, "「祟りは祟りですもの！！",
+		   NULL, "\"Nhưng đây là lời nguyền, lời nguyền đấy!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400151", 256, TRUE);
+	OutputLine(NULL, "　人間の考えでは想像もつきませんわー！」",
+		   NULL, " Lý lẽ con người làm sao mà giải thích được cơ chứ!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_warai_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「あはは、沙都子ちゃん＠擬人化された神さまという存在は、結局は人間の生み出したものなんだよ＠だからその考え方も、人間に理解できるようにできてる＠…ギリシャ神話の神様を見てごらんよ＠泣いたり怒ったり嫉妬したり…とにかく人間的なんだよ。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800084", 256, TRUE);
+	OutputLine(NULL, "「あはは、沙都子ちゃん。",
+		   NULL, "\"Ahaha, Satoko-chan,", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800085", 256, TRUE);
+	OutputLine(NULL, "擬人化された神さまという存在は、結局は人間の生み出したものなんだよ。",
+		   NULL, " thánh thần suy cho cùng chỉ là sản phẩm tưởng tượng của trí tuệ con người thôi mà.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800086", 256, TRUE);
+	OutputLine(NULL, "だからその考え方も、人間に理解できるようにできてる。",
+		   NULL, " Thế nên con người cũng phải hiểu được cách nghĩ của thánh thần chứ.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800087", 256, TRUE);
+	OutputLine(NULL, "…ギリシャ神話の神様を見てごらんよ。",
+		   NULL, " Ví dụ như thần thoại Hy Lạp ấy.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800088", 256, TRUE);
+	OutputLine(NULL, "泣いたり怒ったり嫉妬したり…とにかく人間的なんだよ。」",
+		   NULL, "\"Các vị thần cũng biết khóc lóc, biết giận dữ, biết ghen tuông... giống y như con người thôi.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_nande_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//「えっと…、つまり、オヤシロさまもまた、人間同様に何らかの利害に基づいて祟りをしている、ということですか？＠
+//「変な言い方になっちゃったけど、つまりはそういうこと。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200142", 256, TRUE);
+	OutputLine(NULL, "「えっと…、つまり、オヤシロさまもまた、人間同様に何らかの利害に基づいて祟りをしている、ということですか？」",
+		   NULL, "\"Ừmm... Ý anh là Oyashiro-sama cũng phải có mục đích nhất định nào đó nên mới nguyền rủa con người phải không?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800089", 256, TRUE);
+	OutputLine(NULL, "「変な言い方になっちゃったけど、つまりはそういうこと。」",
+		   NULL, "\"Nói vậy hơi kỳ nhưng xét ra thì cũng đúng.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res1", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_2_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「……触らぬ神に祟りなしって言いますからねぇ＠なっはっは、一理あります。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700359", 256, TRUE);
+	OutputLine(NULL, "「……触らぬ神に祟りなしって言いますからねぇ。",
+		   NULL, "\"Các cụ dạy rằng \"Có thờ có thiêng, có kiêng có lành\" mà.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700360", 256, TRUE);
+	OutputLine(NULL, "なっはっは、一理あります。」",
+		   NULL, " Ahaha, hợp lý lắm.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeAllBustshots( 400, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「……つまり、オヤシロさまにせよ、人間にせよ、何か理由があるはず、ということなのです。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500094", 256, TRUE);
+	OutputLine(NULL, "「……つまり、オヤシロさまにせよ、人間にせよ、何か理由があるはず、ということなのです。」",
+		   NULL, "\"...Tóm lại, dù có muốn kết tội con người hay Oyashiro-sama thì vẫn phải tìm ra được lý do xác đáng đã.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_def_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「でも梨花＠　その理由がはっきりしないなら…どうなりますの？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400152", 256, TRUE);
+	OutputLine(NULL, "「でも梨花？",
+		   NULL, "\"Nhưng Rika à...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400153", 256, TRUE);
+	OutputLine(NULL, "　その理由がはっきりしないなら…どうなりますの？」",
+		   NULL, " Lỡ như lý do đó... quá khó hiểu thì sao?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(1, 5, "sprite/normal/ri1_warai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「……つまりは、わかんないということなのです。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500095", 256, TRUE);
+	OutputLine(NULL, "「……つまりは、わかんないということなのです。」",
+		   NULL, "\"...Thì đành chịu thôi chứ sao.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_warai_a1_", "2", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「あははははは＠　そうだね＠まだプロローグだもんね＠明かされていないことがたくさんあるだろうし。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200143", 256, TRUE);
+	OutputLine(NULL, "「あははははは！",
+		   NULL, "\"Ahahahahaha!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200144", 256, TRUE);
+	OutputLine(NULL, "　そうだね。",
+		   NULL, " Đúng đó.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200145", 256, TRUE);
+	OutputLine(NULL, "まだプロローグだもんね。",
+		   NULL, " Đây mới chỉ là chương mở đầu thôi mà.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200146", 256, TRUE);
+	OutputLine(NULL, "明かされていないことがたくさんあるだろうし。」",
+		   NULL, " Vẫn còn nhiều chi tiết chưa được tiết lộ lắm.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 8, "sprite/normal/tomi1_def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「そうだね＠現時点ではこれ以上の推理は難しいねぇ。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800090", 256, TRUE);
+	OutputLine(NULL, "「そうだね。",
+		   NULL, "\"Đúng đấy.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800091", 256, TRUE);
+	OutputLine(NULL, "現時点ではこれ以上の推理は難しいねぇ。」",
+		   NULL, " Bây giờ có muốn suy luận thêm nữa cũng khó.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_tokui_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「いーや＠　白黒付けないと納得できないね！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300285", 256, TRUE);
+	OutputLine(NULL, "「いーや！",
+		   NULL, "\"Phản đốiii~~!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300286", 256, TRUE);
+	OutputLine(NULL, "　白黒付けないと納得できないね！」",
+		   NULL, " Trắng đen lẫn lộn vậy thì sao mà chấp nhận nổi chứ!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_akireru_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「魅音さんもこだわりますのね。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400154", 256, TRUE);
+	OutputLine(NULL, "「魅音さんもこだわりますのね。」",
+		   NULL, "\"Mion-san có vẻ câu nệ quá nhỉ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(1, 3, "sprite/normal/me1a_warai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「あははは＠　限られた状況で最大限に推理する！＠　ちょっぴり部活感覚で面白いでしょ？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300287", 256, TRUE);
+	OutputLine(NULL, "「あははは！",
+		   NULL, "\"Ahahaha!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300288", 256, TRUE);
+	OutputLine(NULL, "　限られた状況で最大限に推理する！！",
+		   NULL, " Có chừng đó đầu mối thì phải biết tận dụng hết mức chứ!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300289", 256, TRUE);
+	OutputLine(NULL, "　ちょっぴり部活感覚で面白いでしょ？」",
+		   NULL, " Mà thế này cũng vui chẳng kém gì hoạt động Câu lạc bộ nhỉ?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+
+	ModDrawCharacter(2, 2, "sprite/normal/re1b_warai_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//「あ、うん＠　そう考えれば面白いかも！￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200147", 256, TRUE);
+	OutputLine(NULL, "「あ、うん！",
+		   NULL, "\"Ư-Ừm!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200148", 256, TRUE);
+	OutputLine(NULL, "　そう考えれば面白いかも！」",
+		   NULL, " Đúng là vui thật!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene("black", 1000 );
+	PlayBGM( 1, "msys04", 128, 0 );
+	DrawScene("background/res1", 1000 );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_2_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「じゃあ、整理してみましょうか＠えーと、私は祟り派です＠富竹くんは人間派でしたよね？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700361", 256, TRUE);
+	OutputLine(NULL, "「じゃあ、整理してみましょうか。",
+		   NULL, "\"Vậy chúng ta tổng kết lại nào.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700362", 256, TRUE);
+	OutputLine(NULL, "えーと、私は祟り派です。",
+		   NULL, " Ừm, tôi thì theo phe lời nguyền.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700363", 256, TRUE);
+	OutputLine(NULL, "富竹くんは人間派でしたよね？」",
+		   NULL, " Tomitake-san theo phe con người đúng không?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 8, "sprite/normal/tomi1_warai_", "1", "right", 7, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「えぇ＠僕は人間が犯人ってことで行きます。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800092", 256, TRUE);
+	OutputLine(NULL, "「えぇ。",
+		   NULL, "\"Vâng.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800093", 256, TRUE);
+	OutputLine(NULL, "僕は人間が犯人ってことで行きます。」",
+		   NULL, " Theo cháu thì chủ mưu là con người.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 7, FALSE, 0, 0, 200, TRUE );
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_warai_a1_", "1", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+	PlaySE( 4, "wa_010", 128, 64 );
+//「私も人間犯人説＠　もちろん、祟りというファンタジーは嫌いじゃないよ＠　だけど今回の事件に限っては、祟りの線は薄いねー。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300290", 256, TRUE);
+	OutputLine(NULL, "「私も人間犯人説！",
+		   NULL, "\"Cháu cũng tán thành giả thiết chủ mưu là con người!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300291", 256, TRUE);
+	OutputLine(NULL, "　もちろん、祟りというファンタジーは嫌いじゃないよ？",
+		   NULL, " Thực ra cháu cũng thích mấy thứ kỳ bí hay ho kiểu như lời nguyền lắm chứ,", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300292", 256, TRUE);
+	OutputLine(NULL, "　だけど今回の事件に限っては、祟りの線は薄いねー。」",
+		   NULL, " nhưng riêng vụ này mà ốp lời nguyền vào để giải thích thì có hơi thiếu sức thuyết phục~.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「人間派が２人出ましたね＠レナさんは祟り派でしたよね？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700364", 256, TRUE);
+	OutputLine(NULL, "「人間派が２人出ましたね。",
+		   NULL, "\"Vậy là phe con người có hai phiếu rồi.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700365", 256, TRUE);
+	OutputLine(NULL, "竜宮さんは祟り派でしたよね？」",
+		   NULL, " Ryuugu-san nghiêng về giả thiết lời nguyền đúng không?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_def_a1_", "0", "up", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「はい＠私と沙都子ちゃんは祟り派です＠ねー？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200149", 256, TRUE);
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"Vâng.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200150", 256, TRUE);
+	OutputLine(NULL, "レナと沙都子ちゃんは祟り派です。",
+		   NULL, " Rena và Satoko-chan đều theo phe lời nguyền ạ.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200151", 256, TRUE);
+	OutputLine(NULL, "ねー？」",
+		   NULL, " Nhỉ~?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 7, FALSE, 0, 0, 200, TRUE );
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_warai_a1_", "1", "right", 7, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「えぇ＠/
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400155", 256, TRUE);
+	OutputLine(NULL, "「えぇ！",
+		   NULL, "\"Vâng!", Line_WaitForInput);
+
+	PlaySE( 4, "wa_010", 128, 64 );
+//　祟り派ですわよ＠　レナさんや魅音さんのことを悪魔みたいに言う人の方がよっぽど祟りにあうべきですの！！＠
+
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400156", 256, TRUE);
+	OutputLine(NULL, "　祟り派ですわよ！",
+		   NULL, " Lời nguyền có thật đó!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400157", 256, TRUE);
+	OutputLine(NULL, "　レナさんや魅音さんのことを悪魔みたいに言う人の方がよっぽど祟りにあうべきですの！！」",
+		   NULL, " Những ai dám bảo Rena-san và Mion-san là người xấu rồi cũng sẽ bị lời nguyền trừng phạt thôi!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "left", 7, FALSE, 0, 0, 200, TRUE );
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_tohoho_a1_", "1", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「そりゃまー、!w1000私も自分のキャラがそんな悪魔みたいなヤツだとは思いたくないけどさ＠……部活モードの時にはクールでなきゃ＠　感情論だけで選ぶと大ヤケドするよ～？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300293", 256, TRUE);
+	OutputLine(NULL, "「そりゃまー、",
+		   NULL, "\"Ờ thì...", Line_Continue);
+
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	// (backup) SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "私も自分のキャラがそんな悪魔みたいなヤツだとは思いたくないけどさ。",
+		   NULL, " Chị cũng đâu có muốn nghi ngờ rằng mình đang phải đóng vai ác.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300294", 256, TRUE);
+	OutputLine(NULL, "……部活モードの時にはクールでなきゃ！",
+		   NULL, " ...Nhưng thân là Hội trưởng thì luôn phải giữ được cái đầu lạnh chứ!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300295", 256, TRUE);
+	OutputLine(NULL, "　感情論だけで選ぶと大ヤケドするよ〜？」",
+		   NULL, " Để cảm xúc chi phối quyết định là ắt sẽ phải hối hận đó~\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res1", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_2_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「まぁまぁ＠どっちを選んだっていいじゃあないですか。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700366", 256, TRUE);
+	OutputLine(NULL, "「まぁまぁ。",
+		   NULL, "\"Nào nào...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700367", 256, TRUE);
+	OutputLine(NULL, "どっちを選んだっていいじゃあないですか。」",
+		   NULL, " Ủng hộ phe nào cũng được thôi mà.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「あれ？　梨花ちゃんがまだだね＠どっちだと思う？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200152", 256, TRUE);
+	OutputLine(NULL, "「あれ？　梨花ちゃんがまだだね。",
+		   NULL, "\"Ơ kìa? Rika-chan vẫn chưa phát biểu gì à?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200153", 256, TRUE);
+	OutputLine(NULL, "どっちだと思う？」",
+		   NULL, " Em nghĩ sao?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 400, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「………ボクはオヤシロさまが悪い神様だとは思わないですよ。＠
+//「あれ、面白い意見だね。＠
+//;＜富竹
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500096", 256, TRUE);
+	OutputLine(NULL, "「………ボクはオヤシロさまが悪い神様だとは思わないですよ。」",
+		   NULL, "\"...Em nghĩ Oyashiro-sama không phải là ác thần đâu.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800094", 256, TRUE);
+	OutputLine(NULL, "「あれ、面白い意見だね。」",
+		   NULL, "\"Ái chà, ý kiến thú vị đấy chứ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+//「……祟ってばかりの悪い神様なら、祀るの嫌です＠ボクは祟るより、ご利益のある神さまの方が好きですよ。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500097", 256, TRUE);
+	OutputLine(NULL, "「……祟ってばかりの悪い神様なら、祀るのは嫌なのです。",
+		   NULL, "\"...Em không muốn phải tôn thờ một vị ác thần chuyên nguyền rủa con người đâu.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500098", 256, TRUE);
+	OutputLine(NULL, "ボクは祟るより、ご利益のある神さまの方が好きなのですよ。」",
+		   NULL, " Em thích một vị thần rộng lượng ban phước lành cơ.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 7, FALSE, 0, 0, 200, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_warai_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「そっか、梨花ちゃんって巫女さんをやったんだよね…＠　うん。いい意見。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200154", 256, TRUE);
+	OutputLine(NULL, "「そっか、梨花ちゃんって巫女さんをやってるんだよね…！",
+		   NULL, "\"Đúng rồi nhỉ, Rika-chan là miko giữ đền mà...!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200155", 256, TRUE);
+	OutputLine(NULL, "　うん。いい意見。」",
+		   NULL, " Ừm. Ý kiến hay đó.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(2, 3, "sprite/normal/me1b_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+//「じゃあ何＠　梨花ちゃんはオヤシロさまじゃないって思うなら、!w1000…やっぱ犯人は人間って思うわけ？！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300296", 256, TRUE);
+	OutputLine(NULL, "「じゃあ何？",
+		   NULL, "\"Thế giờ tính sao đây?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300297", 256, TRUE);
+	OutputLine(NULL, "　梨花ちゃんはオヤシロさまじゃないって思うなら、",
+		   NULL, " Không tin vào giả thiết Oyashiro-sama...", Line_Continue);
+
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	// (backup) SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "…やっぱ犯人は人間って思うわけ？！」",
+		   NULL, " nghĩa là Rika-chan cũng theo phe \"con người là thủ phạm\" hả!?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(1, 5, "sprite/normal/ri1_warai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「……そういうことにしますです☆￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500099", 256, TRUE);
+	OutputLine(NULL, "「……そういうことにしますのです☆」",
+		   NULL, "\"...Cứ cho là vậy đi ạ ☆\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_2_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「ありゃまぁ＠…票がざっくり分かれましたねぇ＠　祟り派と人間派で半々ですか。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700368", 256, TRUE);
+	OutputLine(NULL, "「ありゃまぁ。",
+		   NULL, "\"Ái chà...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700369", 256, TRUE);
+	OutputLine(NULL, "…票がざっくり分かれましたねぇ！",
+		   NULL, " Vậy là số phiếu chia đều cho hai bên rồi!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700370", 256, TRUE);
+	OutputLine(NULL, "　祟り派と人間派で半々ですか。」",
+		   NULL, " Một nửa theo phe lời nguyền, một nửa lại theo phe con người.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	PlayBGM( 1, "msys02", 128, 0 );
+	DrawSceneWithMask("background/res1", "m1", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_wink_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「どうすんのさ＠これじゃ意見は半々＠決着が着かなくて面白くないよね！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300298", 256, TRUE);
+	OutputLine(NULL, "「どうすんのさ。",
+		   NULL, "\"Tính sao bây giờ?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300299", 256, TRUE);
+	OutputLine(NULL, "これじゃ意見は半々。",
+		   NULL, " Hai phe ngang cơ, chẳng bên nào chịu thua bên nào cả.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300300", 256, TRUE);
+	OutputLine(NULL, "決着が着かなくて面白くないよね！」",
+		   NULL, " Không ra ngô ra khoai gì thì rõ là mất vui!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_warai_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「裁判官が奇数なのは、つまりそういうことだからねぇ＠あとひとり意見がほしいなぁ！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800095", 256, TRUE);
+	OutputLine(NULL, "「裁判官が奇数なのは、つまりそういうことだからねぇ。",
+		   NULL, "\"Muốn phân định rõ ràng thì tổng số phiếu phải lẻ ra, nên tốt nhất là... ", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800096", 256, TRUE);
+	OutputLine(NULL, "あとひとり意見がほしいなぁ！」",
+		   NULL, " ta hãy hỏi thêm ý kiến của một người khác nữa!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_warai_b1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「あ、ならちょうどいいかな＠圭一くん本人に聞いてみない＠　電話で！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200156", 256, TRUE);
+	OutputLine(NULL, "「あ、ならちょうどいいかな。",
+		   NULL, "\"A, đúng lúc ghê.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200157", 256, TRUE);
+	OutputLine(NULL, "圭一くん本人に聞いてみない？",
+		   NULL, " Chúng ta hỏi Keiichi-kun luôn nhé?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200158", 256, TRUE);
+	OutputLine(NULL, "　電話で！」",
+		   NULL, " Gọi điện thôi nào!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_warai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「……祟り殺された本人の意見は貴重ですよ。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500100", 256, TRUE);
+	OutputLine(NULL, "「……祟り殺された本人の意見は貴重ですよ。」",
+		   NULL, "\"...Ý kiến của chính nạn nhân chắc chắn sẽ rất đáng giá đấy ạ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(2, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//「そうと決まればさっそく電話ですわー！！！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400158", 256, TRUE);
+	OutputLine(NULL, "「そうと決まればさっそく電話ですわー！！！」",
+		   NULL, "\"Quyết định vậy rồi thì mau mau nhấc điện thoại lên thôi!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene("black", 1000 );
+	PlayBGM( 2, "lsys17", 128, 0 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	DrawScene("background/denwa", 1000 );
+
+//「もしもし圭一くん＠　レナでーす＠今、お仕事お忙しいですか？＠
+//「あー忙しいぞー＠シナリオが一本終わって一休みって思ってたら、すぐに次のシナリオだもんなー！！￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200159", 256, TRUE);
+	OutputLine(NULL, "「もしもし圭一くん？",
+		   NULL, "\"Alô, Keiichi-kun?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200160", 256, TRUE);
+	OutputLine(NULL, "　レナでーす。",
+		   NULL, " Rena nè~", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200161", 256, TRUE);
+	OutputLine(NULL, "今、お仕事お忙しいですか？」",
+		   NULL, " Bây giờ cậu vẫn còn đang bận hả?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100192", 256, TRUE);
+	OutputLine(NULL, "「あー忙しいぞー。",
+		   NULL, "\"Bận tối tăm mặt mũi luôn đây.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100193", 256, TRUE);
+	OutputLine(NULL, "シナリオが一本終わって一休みって思ってたら、すぐに次のシナリオだもんなー！！」",
+		   NULL, " Vừa mới xong chương đầu, còn chưa kịp nghỉ ngơi mà đã phải lo sang chương tiếp theo rồi!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「圭ちゃん、どんな感じ＠　忙しいって？＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300301", 256, TRUE);
+	OutputLine(NULL, "「圭ちゃん、どんな感じ？",
+		   NULL, "\"Kei-chan sao thế?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300302", 256, TRUE);
+	OutputLine(NULL, "　忙しいって？」",
+		   NULL, " Vẫn bận à?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_nande_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「うん＠スネてる。＠
+//「聞こえてるぞこらー！＠　お前らは打ち上げ会でいいよなー＠　俺も出たかったー！！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200162", 256, TRUE);
+	OutputLine(NULL, "「うん。",
+		   NULL, "\"Ừm.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200163", 256, TRUE);
+	OutputLine(NULL, "スネてる。」",
+		   NULL, " Đang kêu trời kêu đất kia kìa.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100194", 256, TRUE);
+	OutputLine(NULL, "「聞こえてるぞこらー！！",
+		   NULL, "\"Tôi nghe thấy rồi đấy nhé!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100195", 256, TRUE);
+	OutputLine(NULL, "　お前らは打ち上げ会でいいよなー！",
+		   NULL, " Rủ nhau đi ăn tiệc vui quá nhỉ!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100196", 256, TRUE);
+	OutputLine(NULL, "　俺も出たかったー！！！」",
+		   NULL, " Tôi cũng muốn đi lắm chứ bộ!!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri1_warai_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「……立ち絵を描いてもらえたら圭一も来れますですよ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500101", 256, TRUE);
+	OutputLine(NULL, "「……収録の残り台詞数でボクたちの誰か一人でも抜いたら、圭一も参加できるのですよ。」",
+		   NULL, "\"...Nếu muốn tới họp mặt cùng bọn em thì Keiichi phải chăm chỉ thu âm cho hết thoại từ trước chứ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa1a_akireru_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「梨花、それは内緒ですわ…。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400159", 256, TRUE);
+	OutputLine(NULL, "「梨花、あの量でそれは不可能ですわ…。」",
+		   NULL, "\"Rika à, cả đống thoại nhiều như vậy thì sao mà xong kịp...\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeAllBustshots( 400, TRUE );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1b_def_b1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「あ、それでごめんね圭一くん＠…今回のシナリオでね＠圭一くん＠その!s500………!sd死んじゃったじゃない＠　犯人は誰だろうねって、そういう話をしてるの。＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200164", 256, TRUE);
+	OutputLine(NULL, "「あ、それでごめんね圭一くん。",
+		   NULL, "\"A, xin phép làm phiền cậu chút nhé Keiichi-kun.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200165", 256, TRUE);
+	OutputLine(NULL, "…今回のシナリオでね、",
+		   NULL, " ...Trong chương vừa rồi...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200166", 256, TRUE);
+	OutputLine(NULL, "圭一くん、",
+		   NULL, " Keiichi-kun...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200167", 256, TRUE);
+	OutputLine(NULL, "その",
+		   NULL, " bị", Line_Continue);
+//s500
+
+	SetSpeedOfMessage( TRUE, 0, );
+	OutputLine(NULL, "………",
+		   NULL, "...", Line_Continue);
+//!sd,
+	SetSpeedOfMessage( FALSE, 0, );
+
+	OutputLine(NULL, "死んじゃったじゃない？",
+		   NULL, " chết đúng không?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200168", 256, TRUE);
+	OutputLine(NULL, "　犯人は誰だろうねって、そういう話をしてるの。」",
+		   NULL, " Mọi người đang bàn luận xem ai là chủ mưu đó.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_wink_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「つまりさ、圭ちゃんを殺したのは人間か、オヤシロさまの祟りかってことで意見が分かれちゃってるのよー。＠
+//「本当にごめんね＠　台本読みで忙しいところ…＠圭一くんはどっちだと思うかな？￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300303", 256, TRUE);
+	OutputLine(NULL, "「つまりさ、圭ちゃんを殺したのは人間か、オヤシロさまの祟りかってことで意見が分かれちゃってるのよー。」",
+		   NULL, "\"Hai bên đang sôi nổi giằng co xem Kei-chan bị nguyền hay bị con người ám hại đây.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200169", 256, TRUE);
+	OutputLine(NULL, "「本当にごめんね！",
+		   NULL, "\"Thành thật xin lỗi cậu!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200170", 256, TRUE);
+	OutputLine(NULL, "　台本読みで忙しいところ…。",
+		   NULL, " Mình biết là cậu đang bận học kịch bản, nhưng...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200171", 256, TRUE);
+	OutputLine(NULL, "圭一くんはどっちだと思うかな？」",
+		   NULL, " theo Keiichi-kun thì bên nào đúng?\"", Line_Normal);
+	ClearMessage();
+
+//「そんなの決まってんじゃねーかー！！＠
+//「どっち？￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100197", 256, TRUE);
+	OutputLine(NULL, "「そんなの決まってんじゃねーかー！！」",
+		   NULL, "\"Rành rành ra thế mà cũng phải hỏi à!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200172", 256, TRUE);
+	OutputLine(NULL, "「どっち？」",
+		   NULL, "\"Là sao?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
+
+	PlayBGM( 1, "msys03", 128, 0 );
+//「どっちなんてもんじゃねーよ！＠　村の怪しげなヤツらに狙われて、さらにオヤシロさまとかいう怪しいのに祟られて！！＠　人間も祟りも全部！！＠　これはイジメだーー！！！！＠
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100198", 256, TRUE);
+	OutputLine(NULL, "「どっちなんてもんじゃねーよ！！",
+		   NULL, "\"Là cả hai luôn chứ sao!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100199", 256, TRUE);
+	OutputLine(NULL, "　村の怪しげなヤツらに狙われて、さらにオヤシロさまとかいう怪しいのに祟られて！！！",
+		   NULL, " Hết bị dân làng lập mưu ám hại rồi lại đến bị Oyashiro-sama gì gì đó nguyền với chả rủa!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100200", 256, TRUE);
+	OutputLine(NULL, "　人間も祟りも全部！！！",
+		   NULL, " Cả con người lẫn lời nguyền cứ nhằm tôi mà úp sọt hết cả!!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100201", 256, TRUE);
+	OutputLine(NULL, "　これはなにかの嫌がらせかーー！！！！」",
+		   NULL, " Hạt bụi nào hóa kiếp thân tôi thế này!!!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri1_warai_a1_", "1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+
+//「………かわいそかわいそです＠今度、頭をなでなでしてあげますですよ。￥
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500102", 256, TRUE);
+	OutputLine(NULL, "「………かわいそかわいそです。",
+		   NULL, "\"...Tội nghiệp, tội nghiệp ghê.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500103", 256, TRUE);
+	OutputLine(NULL, "今度、頭をなでなでしてあげますですよ。」",
+		   NULL, " Chương sau em sẽ lại xoa đầu anh nữa nhé.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
+	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 0, TRUE );
+	PlayBGM( 1, "msys02", 128, 0 );
+	ModDrawCharacter(3, 8, "sprite/normal/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
+	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 1000, TRUE );
+
+//「結局、意見がわかれちゃったねぇ。＠
+//                      ;＜富竹
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s20/08/440800097", 256, TRUE);
+	OutputLine(NULL, "「結局、意見がわかれちゃったねぇ。」",
+		   NULL, "\"Vậy là hai bên vẫn cân bằng nhỉ.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「私ももう一度考え直してみます＠見落としがあるかもしれませんので。￥
+//          ;＜大石
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700371", 256, TRUE);
+	OutputLine(NULL, "「私ももう一度考え直してみます。",
+		   NULL, "\"Thử xem xét lại vấn đề thêm lần nữa đi mọi người.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700372", 256, TRUE);
+	OutputLine(NULL, "見落としがあるかもしれませんので。」",
+		   NULL, " Có lẽ chúng ta vẫn còn bỏ sót nhiều điều đấy.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "right", 0, 0, 1300 );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「それでは引き続き、『ひぐらしのなく頃に～綿流し編～』をお楽しみ下さいね！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200173", 256, TRUE);
+	OutputLine(NULL, "「それでは引き続き、『ひぐらしのなく頃に粋』をお楽しみ下さいね！」",
+		   NULL, "\"Kính mong các bạn độc giả hãy đón đọc chương tiếp theo: \"Khi Ve Sầu Khóc ~Chương 2: Miên Lưu Hội~\" nhé!\"", Line_Normal);
+	ClearMessage();
+
+
+//＜レナ
+
+
+//mov %CAMP_MUGIC,0
+	DisableWindow();
+	SetValidityOfInput( FALSE );
+//	Wait( 1000 );
+	DrawBustshotWithFiltering(6, "cinema", "x", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
+	DrawBustshot(7, "title02", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 3000, TRUE );
+	Wait( 2000 );
+	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
+	Wait( 1000 );
+	FadeBustshotWithFiltering( 7, "x", 1, FALSE, 0, 0, 1000, TRUE );
+	DrawScene("black", 3000 );
+	SetValidityOfInput( TRUE );
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//■以前はこの後に「第２話へのお誘い」のイベントが続いたけど、今回はない。
+//■この「第２話へのお誘い」は小改造をして、お疲れさま会Ⅱのあとにくっつく☆
+//■アイキャッチの後、以下に続く。
+
+//＜真っ暗な画面に以下を表示。（画面の中央に出るようにできる…？）＞
+	DisableWindow();
+	DrawScene("black", 1000 );
+//mov %RenaPan,1
+//mov %Omake_Game,1
+
+
+
+//csp -1
+	DisableWindow();
+//	DrawScene( "black", 400 );
+
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
+//	DisableWindow();
+//	DrawSceneWithMask( "s_jump_back", "4", 0, 0, 1000 );
+//	PlaySE( 4, "wa_041", 128, 64 );
+//..bg ":c;BMP\Efe\Omake_Renapan.bmp",18,1500,":c;BMP\Efe\5.bmp"
+//	Wait( 10000 );
+//DrawScene( "Omake_Haikei", 1000 );
+//	PlaySE( 4, "wa_036", 128, 64 );
+//	DrawSceneWithMask( "Ex_wata", "5", 0, 0, 1000 );
+//..bg ":c;BMP\Efe\Omake_Watanagasi.bmp",18,1500,":c;BMP\Efe\5.bmp"
+//	Wait( 10000 );
+//	DrawScene( "black", 1000 );
+
+//       ////resettimer                              ;タイマリセット
+//       waittimer 1000                          ;５秒(5000ms)ウェイト
+
+	DrawScene("black", 1000 );
+//gosub *Omake_E
+
+
+//goto *Omake_mode
+
+//gosub *tip_e
+//return
+
+	GetAchievement("HIGURASHI_STORY_EP01_OMAKE");
+}

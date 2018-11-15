@@ -1,0 +1,80 @@
+void main()
+{
+
+//■古手神社の神主の病死
+
+//*Sub_Tips_010
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene("black", 1000 );
+	DrawScene("background/simen3", 1000 );
+	PlayBGM( 1, "msys07", 128, 0 );
+	
+//　昭和５６年６月ＸＸ日夕刊よ＠
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　昭和５６年６月ＸＸ日夕刊より",
+		   NULL, "Báo Pháp luật tháng Sáu năm 1981.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　ＸＸ日午後１０時頃、鹿骨市雛見沢村Ｘ丁目、古手神社神主のＸＸＸＸさんが不調を訴え病院で手当てを受け一時は回復したが、深夜に容態が急変、死亡した￥
+	if (GetGlobalFlag(GADVMode)) {
+		OutputLineAll("", NULL, Line_ContinueAfterTyping);
+		OutputLine(NULL, "　ＸＸ日午後１０時頃、鹿骨市雛見沢村Ｘ丁目、古手神社神主のＸＸＸＸさんが不調を訴え病院で手当てを受け一時は回復したが、深夜に容態が急変、死亡した。",
+			   NULL, "Vào đêm ngày XX tại làng Hinamizawa thuộc quận X, thành phố Shishibone, vị pháp sư quản lí đền thờ Furude đã đột ngột qua đời vì bệnh cũ tái phát.", Line_Normal);
+	} else {
+		OutputLine(NULL, "　ＸＸ日午後１０時頃、鹿骨市雛見沢村Ｘ丁目、古手神社神主のＸＸＸＸさんが不調を訴え病院で手当てを受け一時は回復したが、深夜に容態が急変、死亡した。",
+			   NULL, "Vào đêm ngày XX tại làng Hinamizawa thuộc quận X, thành phố Shishibone, vị pháp sư quản lí đền thờ Furude đã đột ngột qua đời vì bệnh cũ tái phát.", Line_Normal);
+	}
+	ClearMessage();
+
+
+//　関係者の話では、当日開催されていた祭りの準備等で相当の心労があったと言う＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　関係者の話では、当日開催されていた祭りの準備等で相当の心労があったと言う。",
+		   NULL, "Gia đình người quá cố cho rằng nguyên nhân dẫn tới kết cục bi thảm này là do áp lực tâm lí nặng nề từ việc tổ chức hội làng khiến sức khỏe của ông sa sút nghiêm trọng.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　また、ＸＸＸＸさんの死亡直後、妻のＸＸＸＸさんが遺書を残し行方不明になった＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　また、ＸＸＸＸさんの死亡直後、妻のＸＸＸＸさんが遺書を残し行方不明になった。",
+		   NULL, "Ngay sau khi nhận được tin dữ, vợ vị pháp sư cũng lập tức bỏ nhà ra đi, chỉ để lại một bức thư tuyệt mệnh tỏ ý muốn \"hiến tế\" bản thân cho vị thành hoàng làng.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　警察と青年団で捜索を続けているが、遺書で自殺をほのめかした鬼ヶ淵沼は地元では底なし沼として知られており難航している￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　警察と青年団で捜索を続けているが、遺書で自殺をほのめかした鬼ヶ淵沼は地元では底なし沼として知られており難航している。",
+		   NULL, "<size=-4>Phía cảnh sát mau chóng hợp tác với hội đồng làng để triển khai kế hoạch tìm kiếm, nhưng địa thế hiểm trở của Đầm Lầy Quỷ (mà dân bản địa coi là \"cổng địa ngục\") khiến cho công tác xác định vị trí và trục vớt thi thể gặp rất nhiều khó khăn.</size>", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene("black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+
+//gosub *tip_e
+//return
+
+
+
+}
+
+
+
+
+
+
